@@ -44,7 +44,7 @@ const HeroSection = () => {
                         </button>
                     </Link>
 
-                    <Link href={'https://github.com/Steven6Brown/portfolioWebsite'}> {/* ADD GITHUB LINK */}
+                    <Link href={'https://github.com/Steven6Brown'}> {/* ADD GITHUB LINK */}
                         <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black lg:mr-10 shadow-black shadow-lg'> {/* POSSIBLY CHANGE text-black TO text-white */}
                             <FaGithub className="h-6 w-6" />
                         </button>
