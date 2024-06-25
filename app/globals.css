@@ -2,32 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    @apply bg-black text-white
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1,
+h2 {
+  @apply font-extrabold
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1 {
+  @apply text-4xl lg:text-6xl /* Title (HERO) */
+}
+
+h2 {
+  @apply text-3xl lg:text-5xl /* Title and Section Header (TYPE ANIMATION, "BEHIND THE SCENES", "MY ABILITIES") */
+}
+
+h3,
+h4 {
+  @apply font-bold 
+}
+
+h3 {
+  @apply text-2xl lg:text-4xl /* Page Title (ABOUT, PROJECTS, SKILLS, CONNECT) */
+}
+
+h4 {
+  @apply text-xl lg:text-xl /* Tab Header (ABOUT INFORMATION TABS) */
+}
+
+button {
+  @apply hover:scale-105 ease-in duration-200
+}
+
+button:hover span {
+  color: black;
 }
