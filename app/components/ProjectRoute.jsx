@@ -97,10 +97,10 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
                 </div>
             </div>
             
-            {/* WRITTEN BUTTONS */}
-            <div className='container mt-8'>
+            {/* WRITTEN BUTTONS - CODE BUTTON */}
+            {/* <div className='container mt-8'>
                 <div className='mx-auto mb-4'>
-                    <Link href={codebutton}> {/* GITHUB LINK */}
+                    <Link href={codebutton}> {/* GITHUB LINK 
                         <button className='p-1 w-full rounded-lg sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-white lg:mr-10 shadow-black shadow-lg'>
                             <span className='block bg-h-black hover:bg-gradient-to-r from-p-greeen to-s-blue rounded-lg px-7 py-3.5'>
                                 CODE
@@ -108,7 +108,7 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
                         </button>
                     </Link>
                 </div>
-            </div>
+            </div> */}
 
             {/* BACK BUTTON - SQUARE */}
             <div className='container'>
