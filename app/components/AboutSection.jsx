@@ -59,20 +59,20 @@ const TAB_DATA = [
         id: 'certificates',
         content: (
             <div>
+                <h4 className='font-bold text-white border-b mb-1'>Government Certifications</h4>
+                <div className='pl-4'>
+                    <ul className='list-disc'>
+                        <li>DOD Mandatory Controlled Unclassified Information (CUI) Training</li>
+                        <li className='mb-2'>NSA IST Certification</li>
+                    </ul>
+                </div>
+                
                 <h4 className='font-bold text-white border-b mb-1'>LinkedIn Certifications</h4>
                 <div className='pl-4'>
                     <ul className='list-disc'>
                         <li>Cybersecurity Awareness: Cloud Security</li>
                         <li>Cybersecurity Awareness: Cybersecurity Terminology</li>
-                        <li className='mb-2'>Cybersecurity: Key Policies and Resources</li>
-                    </ul>
-                </div>
-
-                <h4 className='font-bold text-white border-b mb-1'>Government Certifications</h4>
-                <div className='pl-4'>
-                    <ul className='list-disc'>
-                        <li>DOD Mandatory Controlled Unclassified Information (CUI) Training</li>
-                        <li>NSA IST Certification</li>
+                        <li>Cybersecurity: Key Policies and Resources</li>
                     </ul>
                 </div>
             </div>
@@ -155,7 +155,7 @@ export const AboutSection = () => {
             <div className='md:grid md:grid-cols-2 gap-8 items-center py-8'>
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full md:order-2'>
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
-                    Hello! My name is Steven Brown, I am a junior at Penn State University Main Campus, on a mission to become a Cybersecurity professional. 
+                    Hello! My name is Steven Brown, I am a senior at Penn State University Main Campus, on a mission to become a Cybersecurity professional. 
                     Currently, I am pursuing a degree in Cybersecurity Analytics and Operations with Security Risk Analysis (SRA) and Information Sciences and Technology (IST) minors.
                     </p>
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
@@ -165,7 +165,7 @@ export const AboutSection = () => {
                     In addition, I am truly passionate about music and musical instruments such as Guitar and Piano and share a great interest in cars. 
                     </p>
                     <p className='text-base md:text-md'>
-                    Presently, I assist in teaching Cyber 262 - Cyber-Defense Studio as a Learning Assistant (LA) and plan to continue assisting students throughout the end of my college career. 
+                    Additonally, I have assisted in teaching Cyber 262 - Cyber-Defense Studio and IST 456 - Information Security Management as a Learning Assistant (LA) and plan to continue assisting students throughout the end of my college career. 
                     I love the opportunity to help my peers learn and succeed in their studies. 
                     This also gives me the opportunity to reinforce my knowledge of the subjects. 
                     In my free time, I'm a Web Developer Captain for Penn State's Homecoming Technology Committee, and I volunteer alongside my director and fellow technology committee members to update and maintain the Homecoming website.
