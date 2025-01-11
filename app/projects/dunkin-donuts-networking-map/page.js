@@ -7,29 +7,31 @@ const DunkinDonutsNetworkingMap = () => {
     const description1 = (
         <>
             <p>
-                The Orange Pi 5 Plus Setup and Configuration Document project involved creating a comprehensive guide in Markdown for setting up and configuring an Orange Pi 5 Plus, a single-board computer. 
-                This document serves as a detailed resource for self-learning and reference, covering various aspects from initial setup to advanced configurations.
+                The networking map for Dunkin' Donuts' multiple locations in New York, New York outlines the key components and structure necessary to support their operations. 
+                It includes the Main Site with a star topology, secure Site-to-Site connectivity between stores, and an in-depth layout of devices and network components. 
+                We have utilized Verizon FIOS as the ISP, implementing private IP addresses for the VPN and securing all transactions with encryption. 
+                The design also integrates both wired and wireless connectivity solutions, ensuring seamless communication between various systems like kiosks, mobile ordering, and VoIP services. 
+                Multiple network diagrams further illustrate this design, optimizing operational flow and ensuring security at every level.
             </p>
         </>
     );
 
-    const description2 = ['Wireshark', 'NAT Translation', 'Lucid Chart', 'IP Routing']; // Skills array
+    const description2 = ['Network Design and Topology', 'Site-to-Site VPN Configuration and Security Measures', 'Network Device Configuration (Routers, Switches, Servers)', 'Implementation of ACLs, Firewalls, and PCI-DSS Compliance', 'Subnetting, IP Address Mapping, and Troubleshooting Connectivity Issues']; // Skills array
 
     const description3 = (
         <>
             <p>
-                Developing the Orange Pi 5 Plus Setup and Configuration Document in Markdown enhanced my skills in technical writing and documentation. 
-                I gained proficiency in structuring complex information into clear, step-by-step instructions, ensuring ease of understanding for readers at all skill levels. 
-                Through this project, I honed my skills in system configuration, documentation with Markdown, and troubleshooting hardware and software issues specific to the Orange Pi 5 Plus platform.
+                Throughout this project, I gained hands-on experience with designing and implementing a complex network for a multi-location business. 
+                I developed a deeper understanding of how to establish secure and reliable site-to-site connectivity using a private IP VPN, ensuring all locations are efficiently linked together. 
+                I also learned the importance of robust security measures, such as VPNs, firewalls, and access control lists, to protect sensitive customer and transaction data.
             </p>
 
             <br></br>
 
-            <p className='mb-8'>
-                This project underscored the importance of clarity and organization in technical documentation, emphasizing the need for precise instructions and comprehensive coverage of setup procedures. 
-                It also provided practical experience in self-directed learning and troubleshooting, enhancing my capability to independently research and implement solutions in technical projects.
-                This project enabled me to deepen my understanding of single-board computer setups, especially with the Orange Pi 5 Plus. 
-                I gained proficiency in documenting technical processes using Markdown efficiently. Moreover, troubleshooting challenges during setup improved my problem-solving abilities in hardware and software integration.
+            <p className='mb-8'> 
+                In particular, the necessity of PCI-DSS compliance for securing payment information was highlighted, and I became familiar with tools and practices to ensure that sensitive data is encrypted and properly protected. 
+                Additionally, I learned about the challenges and costs associated with deploying physical infrastructure like fiber optic cables in urban areas, which influenced our decision to use Verizon FiOS for cost-effective and reliable connectivity. 
+                This project enhanced my technical skills in subnetting, network configuration, and security, and gave me a better understanding of how these elements come together to support a business’s operations.
             </p>
         </>
     );
