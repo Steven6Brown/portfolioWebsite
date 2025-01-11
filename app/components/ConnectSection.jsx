@@ -135,7 +135,7 @@ const ConnectSection = () => {
                 </Link>
 
                 {/* Resume */}
-                <Link href='/files/sb-resume4.pdf'>
+                <Link href='/files/sb-updatedresume.pdf'>
                     <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
                         <FaRegFileAlt className="h-6 w-6" />
                     </button>
