@@ -7,26 +7,11 @@ import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
 import { MenuOverlay } from './MenuOverlay';
 
 const navLinks = [
-  {
-    title: 'Home',
-    path: '/#home',
-  },
-  {
-    title: 'About',
-    path: '/#about',
-  },
-  {
-    title: 'Projects',
-    path: '/#projects',
-  },
-  {
-    title: 'Skills',
-    path: '/#skills',
-  },
-  {
-    title: 'Contact',
-    path: '/#contact',
-  },
+  { title: 'Home', path: '/#home' },
+  { title: 'About', path: '/#about' },
+  { title: 'Projects', path: '/#projects' },
+  { title: 'Skills', path: '/#skills' },
+  { title: 'Contact', path: '/#contact' },
 ];
 
 export const Navbar = () => {
@@ -35,20 +20,10 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-
-      if (scrollTop > 0) {
-        setHasScrolled(true);
-      } else {
-        setHasScrolled(false);
-      }
+      setHasScrolled(window.pageYOffset > 0);
     };
-
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavLinkClick = (e, path) => {
@@ -56,31 +31,28 @@ export const Navbar = () => {
     const targetId = path.split('#')[1];
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const offset = 80; // Adjust the offset value as needed
+      const offset = 80;
       const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
   return (
     <nav
       className={`bg-h-black ${hasScrolled ? 'bg-opacity-95' : 'bg-opacity-100'} w-full`}
-      style={{
-        boxShadow: hasScrolled ? '0px 8px 10px rgba(0, 0, 0, 1)' : 'none',
-      }}
+      style={{ boxShadow: hasScrolled ? '0px 8px 10px rgba(0, 0, 0, 1)' : 'none' }}
     >
       <div className="flex flex-wrap items-center justify-between mx-auto p-8 sm:px-6 md:px-20 w-full">
-        {/* NavLogo */}
         <Link href="/#home" className="flex items-center justify-center">
-          <Image src="/images/navbar/sb-logo.png" width={75} height={75} />
+          <Image 
+            src="/images/navbar/sb-logo.png" 
+            width={75} 
+            height={75} 
+            alt="Steven Brown Logo"
+          />
         </Link>
 
-        {/* Mobile Menu Button */}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
@@ -99,7 +71,6 @@ export const Navbar = () => {
           )}
         </div>
 
-        {/* Navbar Links */}
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
