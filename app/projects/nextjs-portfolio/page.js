@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
-import ProjectImage from '@/public/images/projects/project-2.png';
+import ProjectImage from '@/public/images/projects/portfolio-website.png';
 
 const NextjsPortfolio = () => {
     // Define the description and skills data

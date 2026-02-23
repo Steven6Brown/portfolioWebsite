@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
-import ProjectImage from '@/public/images/projects/project-7.png';
+import ProjectImage from '@/public/images/projects/cloakai.png';
 
 const CloakAI = () => {
     // Define the description and skills data

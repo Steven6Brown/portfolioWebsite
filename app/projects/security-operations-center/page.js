@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
-import ProjectImage from '@/public/images/projects/project-4.png';
+import ProjectImage from '@/public/images/projects/soc.png';
 
 const PSUHomecomingWebsite = () => {
     // Define the description and skills data

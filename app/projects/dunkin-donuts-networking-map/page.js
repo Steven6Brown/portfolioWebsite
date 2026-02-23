@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
-import ProjectImage from '@/public/images/projects/project-6.png';
+import ProjectImage from '@/public/images/projects/dunkin-network.png';
 
 const DunkinDonutsNetworkingMap = () => {
     // Define the description and skills data

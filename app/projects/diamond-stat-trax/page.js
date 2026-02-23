@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
-import ProjectImage from '@/public/images/projects/project-1.png';
+import ProjectImage from '@/public/images/projects/diamondstattrax.png';
 
 const DiamondStatTrax = () => {
     // Define the description and skills data
