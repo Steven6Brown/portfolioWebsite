@@ -62,8 +62,6 @@ const TAB_DATA = [
         id: 'certificates',
         content: (
             <div>
-<<<<<<< HEAD
-=======
                 <h4 className='font-bold text-white border-b mb-1'>LinkedIn Certificatations</h4>
                 <div className='pl-4'>
                     <ul className='list-disc'>
@@ -73,8 +71,7 @@ const TAB_DATA = [
                         <li className='mb-2'>Cybersecurity: Key Policies and Resources</li>
                     </ul>
                 </div>
-
->>>>>>> c9065b9 (Adding Projects)
+                
                 <h4 className='font-bold text-white border-b mb-1'>Government Certifications</h4>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
