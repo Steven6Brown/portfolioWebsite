@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "GolfCaddie",
     description: "Your Personal Golf Assistant",
-    image: "/images/projects/golfcaddie.png",
+    image: "/images/projects/golfcaddie2.png",
     tag: ["All", "AI", "Web"],
     url: "/projects/golfcaddie",
   },
