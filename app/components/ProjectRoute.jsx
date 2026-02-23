@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { IoArrowBackOutline } from "react-icons/io5";
 
-const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtitle2, description2, subtitle3, description3, codebutton }) => {
+const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtitle2, description2, subtitle3, description3, codebutton, codebuttonlabel }) => {
     
     useEffect(() => {
         AOS.init({ duration: 600, once: true });
@@ -15,7 +15,7 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
     return (
         <div className="flex flex-col min-h-screen bg-gradient-to-b from-h-black to-[#222222]">
             
-            {/* Back Button - Top
+            {/* Back Button - Top */}
             <div className="container pt-10">
                 <Link href={'/#projects'}>
                     <button className='flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200 group'>
@@ -23,7 +23,7 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
                         <span className="text-sm font-semibold">Back to Projects</span>
                     </button>
                 </Link>
-            </div> */}
+            </div>
 
             {/* Image Banner Section */}
             <div className="relative w-full h-80 mt-4">
@@ -104,7 +104,7 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
                     {codebutton && codebutton !== '' && (
                         <Link href={codebutton} target="_blank">
                             <button className='px-6 py-3 rounded-lg bg-gradient-to-r from-p-green to-s-blue text-black font-bold hover:opacity-90 transition-opacity duration-200'>
-                                View Code
+                                {codebuttonlabel || 'View Code'}
                             </button>
                         </Link>
                     )}

@@ -3,7 +3,6 @@ import ProjectRoute from '@/app/components/ProjectRoute';
 import ProjectImage from '@/public/images/projects/cloakai.png';
 
 const CloakAI = () => {
-    // Define the description and skills data
     const description1 = (
         <>
             <p>
@@ -13,7 +12,7 @@ const CloakAI = () => {
                 This setup is hosted on a Debian 12 desktop, enabling secure remote access within the organization's network.
             </p>
 
-            <br></br>
+            <br />
 
             <p>
                 Through the CloakAI project, I gained valuable insights into the effective use of Artificial Intelligence (AI) and Machine Learning (ML) in secure environments. 
@@ -28,7 +27,7 @@ const CloakAI = () => {
         </>
     );
 
-    const description2 = ['AI & ML', 'System Administration', 'Networking', 'Security', 'Government Compliance', 'Docker', 'llama3', 'OpenWeb-UI', 'Debian12']; // Skills array
+    const description2 = ['AI & ML', 'System Administration', 'Networking', 'Security', 'Government Compliance', 'Docker', 'Llama3', 'OpenWeb-UI', 'Debian12'];
 
     const description3 = (
         <>
@@ -40,12 +39,12 @@ const CloakAI = () => {
                 User Management: Created an admin panel with advanced features like user permissions, restrictions, and multi-admin support.
             </p>
 
-            <br></br>
+            <br />
 
-            <p className='mb-8'>
+            <p>
                 Through the development of CloakAI, I learned the importance of balancing powerful AI/ML capabilities with strict data security measures, ensuring that the organization can reap the benefits of AI without compromising sensitive information. 
                 I also gained experience in integrating user-friendly interfaces with complex backend systems, and the significance of effective user management in a secure, AI-powered environment. 
-                Finally, I enhanced my understanding of deploying and maintaining AI systems in a secure, isolated network, ensuring reliable remote access for users
+                Finally, I enhanced my understanding of deploying and maintaining AI systems in a secure, isolated network, ensuring reliable remote access for users.
             </p>
         </>
     );
@@ -63,9 +62,10 @@ const CloakAI = () => {
                 subtitle3="What I Learned"
                 description3={description3}
                 codebutton='https://github.com/Steven6Brown/CloakAI'
+                codebuttonlabel='View Setup'
             />
         </div>
-  );
+    );
 };
 
 export default CloakAI;
