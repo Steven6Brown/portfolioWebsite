@@ -35,34 +35,3 @@ export default function Home() {
     </main>
   );
 }
-
-//--------------------------------------------------------------------------
-// NO SPACE BETWEEN PAGES
-
-// // import Image from "next/image";
-// import HeroSection from "./components/HeroSection";
-// import { Navbar} from "./components/Navbar";
-// import { AboutSection } from "./components/AboutSection";
-// import ProjectSection from "./components/ProjectSection";
-// import Skills from "./components/Skills";
-
-// export default function Home() {
-//   return (
-//     // Original: bg-h-black
-//     // Gradient: bg-gradient-to-b from-h-black to-[#2A2A2A]
-//     <main className="flex min-h-screen flex-col bg-gradient-to-b from-h-black to-d-grey-bg">
-//       <header>
-//         <Navbar />
-//       </header>
-//       <div>
-//         <HeroSection />
-//         <AboutSection />
-//         <ProjectSection />
-//         <Skills />
-//       </div>
-//       <footer>
-
-//       </footer>
-//     </main>
-//   );
-// }

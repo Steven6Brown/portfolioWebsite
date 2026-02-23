@@ -121,8 +121,6 @@ const ProjectSection = () => {
 };
 
 export default ProjectSection;
-
-// import React from 'react';
 // import ProjectCard from './ProjectCard';
 
 // const projectsData = [
