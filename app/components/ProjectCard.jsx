@@ -2,33 +2,127 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectCard = ({ imgUrl, title, description, pageUrl, opacity }) => {
+const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
   return (
-    <div className="relative flex flex-col items-center justify-center h-80 w-full shadow-xl shadow-black rounded-xl p-4 group hover:bg-gradient-to-r from-p-green to-s-blue">
-            <Image
-                className='w-full h-full rounded-xl group-hover:opacity-10'
-                src={imgUrl}
-                fill={true}
-                alt="Image For Project"
-            />
-        
-        <div className="hidden group-hover:flex flex-col items-center justify-center absolute inset-0 gap-1">
-            <h3 className="text-2xl text-black tracking-wider text-center">
-                {title}
-            </h3>
+    <Link href={pageUrl} aria-label={`${title} Page`}>
+      <div className="flex flex-col rounded-xl overflow-hidden shadow-xl shadow-black bg-[#1a1a1a] group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
 
-            <p className="pb-2 text-black text-center">{description}</p>
-            <Link href={pageUrl} aria-label="${title} Page">
-                <div className="bg-black cursor-pointer hover:scale-105 rounded-lg">
-                    <p className="text-center p-3 font-bold text-lg" style={{ backgroundImage: 'linear-gradient(to right, #63fc66, #0073ff)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>Learn More</p>
-                </div>
-            </Link>
+        {/* Image container - forced 16:9 aspect ratio */}
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+          <Image
+            src={imgUrl}
+            fill={true}
+            alt={title}
+            style={{ objectFit: "cover" }}
+            className="group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
-    </div>
+
+        {/* Card text below image */}
+        <div className="p-5 flex flex-col gap-2">
+          <div className="w-8 h-1 rounded-full bg-gradient-to-r from-p-green to-s-blue" />
+          <h3 className="text-white text-lg font-bold tracking-wide">
+            {title}
+          </h3>
+          <p className="text-gray-400 text-sm">{description}</p>
+          <p className="text-sm font-semibold mt-1"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #63fc66, #0073ff)',
+              color: 'transparent',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text'
+            }}>
+            View Project →
+          </p>
+        </div>
+
+      </div>
+    </Link>
   );
 };
 
 export default ProjectCard;
+
+// import React from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+
+// const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
+//   return (
+//     <div className="relative h-72 w-full rounded-xl overflow-hidden shadow-xl shadow-black group cursor-pointer">
+      
+//       {/* Image fills the entire card */}
+//       <Image
+//         src={imgUrl}
+//         fill={true}
+//         alt={title}
+//         style={{ objectFit: "cover" }}
+//       />
+
+//       {/* Dark overlay always visible at bottom for subtle depth */}
+//       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+//       {/* Gradient overlay on hover */}
+//       <div className="absolute inset-0 bg-gradient-to-r from-p-green to-s-blue opacity-0 group-hover:opacity-90 transition-all duration-500" />
+
+//       {/* Hover content */}
+//       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
+//         <h3 className="text-2xl text-white font-bold tracking-wider text-center drop-shadow-lg">
+//           {title}
+//         </h3>
+//         <p className="text-white text-center text-sm">{description}</p>
+//         <Link href={pageUrl} aria-label={`${title} Page`}>
+//           <div className="bg-black cursor-pointer hover:scale-105 transition-transform duration-200 rounded-lg mt-1">
+//             <p className="text-center px-6 py-2 font-bold text-lg"
+//               style={{
+//                 backgroundImage: 'linear-gradient(to right, #63fc66, #0073ff)',
+//                 color: 'transparent',
+//                 WebkitBackgroundClip: 'text',
+//                 backgroundClip: 'text'
+//               }}>
+//               Learn More
+//             </p>
+//           </div>
+//         </Link>
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default ProjectCard;
+
+// import React from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+
+// const ProjectCard = ({ imgUrl, title, description, pageUrl, opacity }) => {
+//   return (
+//     <div className="relative flex flex-col items-center justify-center h-80 w-full shadow-xl shadow-black rounded-xl p-4 group hover:bg-gradient-to-r from-p-green to-s-blue">
+//             <Image
+//                 className='w-full h-full rounded-xl group-hover:opacity-10'
+//                 src={imgUrl}
+//                 fill={true}
+//                 alt="Image For Project"
+//             />
+        
+//         <div className="hidden group-hover:flex flex-col items-center justify-center absolute inset-0 gap-1">
+//             <h3 className="text-2xl text-black tracking-wider text-center">
+//                 {title}
+//             </h3>
+
+//             <p className="pb-2 text-black text-center">{description}</p>
+//             <Link href={pageUrl} aria-label="${title} Page">
+//                 <div className="bg-black cursor-pointer hover:scale-105 rounded-lg">
+//                     <p className="text-center p-3 font-bold text-lg" style={{ backgroundImage: 'linear-gradient(to right, #63fc66, #0073ff)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>Learn More</p>
+//                 </div>
+//             </Link>
+//         </div>
+//     </div>
+//   );
+// };
+
+// export default ProjectCard;
 //-------------------------------------------------------------------------------
 /* WORKING PROJECT CARDS - KEEP */
 

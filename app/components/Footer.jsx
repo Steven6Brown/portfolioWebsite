@@ -22,7 +22,7 @@ export const Footer = () => {
             </span>
 
             <p className='text-slate-500'>
-                Copyright <span>&#169;</span> 2025 Steven Brown. All rights reserved.
+                Copyright <span>&#169;</span> 2026 Steven Brown. All rights reserved.
             </p>
         </div>
     </footer>
