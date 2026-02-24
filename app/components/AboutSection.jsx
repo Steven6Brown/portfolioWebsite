@@ -183,7 +183,7 @@ export const AboutSection = () => {
                 {/* Text Content - fades in from left */}
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full' data-aos="fade-right" data-aos-delay="100">
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
-                        I'm Steven Brown, a Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, graduating with a 3.83 GPA and earning 
+                        I'm Steven Brown, a Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, graduating with a 3.83 major GPA and earning 
                         both the Vice Provost Award and multiple Dean's List honors. I also completed two minors in Security Risk Analysis (SRA) and Information Systems Technology (IST), 
                         strengthening my foundation in risk assessment, systems, and applied technology. I hold an NSA IST Certification and have hands-on experience in AI implementation, 
                         security infrastructure, and compliance frameworks, including NIST SP 800, CMMC, and OSINT.

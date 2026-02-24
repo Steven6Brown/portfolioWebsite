@@ -66,7 +66,7 @@ const HeroSection = () => {
                     </div>
                     
                     <div>
-                        <Link href={'/files/sb-updatedresume2.pdf'}>
+                        <Link href={'/files/sb-resume.pdf'}>
                             <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
                                 <FaRegFileAlt className="h-6 w-6" />
                             </button>
