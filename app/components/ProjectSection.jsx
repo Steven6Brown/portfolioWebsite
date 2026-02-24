@@ -16,7 +16,7 @@ const projectsData = [
   {
     id: 2,
     title: "CloakAI",
-    description: "An AI Cybersecurity-Focused Compliancy and IT Tips ChatBot",
+    description: "An AI Cybersecurity-Focused Compliancy ChatBot",
     image: "/images/projects/cloakai.png",
     tag: ["All", "AI", "Web"],
     url: "/projects/cloakai",
@@ -48,7 +48,7 @@ const projectsData = [
   {
     id: 6,
     title: "To-Do List Manager",
-    description: "Task management and productivity application",
+    description: "Task Management and Productivity Application",
     image: "/images/projects/todo-list.png",
     tag: ["All", "Web"],
     url: "/projects/todo-list-manager",

@@ -2,41 +2,44 @@ import React from 'react';
 import ProjectRoute from '@/app/components/ProjectRoute';
 import ProjectImage from '@/public/images/projects/orange-pi.png';
 
-const PSUHomecomingWebsite = () => {
-    // Define the description and skills data
+const OrangePi5PlusSetup = () => {
     const description1 = (
         <>
             <p>
-                The Orange Pi 5 Plus Setup and Configuration Document project involved creating a comprehensive guide in Markdown for setting up and configuring an Orange Pi 5 Plus, a single-board computer. 
-                This document serves as a detailed resource for self-learning and reference, covering various aspects from initial setup to advanced configurations.
+                During my internship at Digital Cloak, I was tasked with setting up and configuring an Orange Pi 5 Plus from scratch and documenting the entire process. 
+                The device was going to be deployed as a network monitoring node, paired with geo pucks and Kismet to passively track and capture wireless device activity on networks. 
+                Getting it properly built, configured, and integrated into the existing security infrastructure was the goal.
+            </p>
+            <br />
+            <p>
+                The setup covers everything from physical hardware assembly, installing the eMMC module, heat sinks, NVMe SSD, and WiFi card, to flashing the Armbian operating system, 
+                configuring Kismet for both WiFi and RTL-SDR capture, and setting up Metricbeat to ship system metrics back to the team's ELK Stack for real-time monitoring. 
+                I also wrote a full setup and configuration guide in Markdown that walks through every step in detail, complete with diagrams and bash commands, so that anyone on the team could replicate the setup independently.
             </p>
         </>
     );
 
-    const description2 = ['Markdown', 'Technical Writing', 'System Configuration', 'Hardware Configuration (Orange Pi 5 Plus)']; // Skills array
+    const description2 = ['Markdown', 'Technical Writing', 'Linux', 'Armbian', 'Debian 12', 'Kismet', 'Metricbeat', 'ELK Stack', 'RTL-SDR', 'Hardware Assembly', 'System Configuration', 'Bash', 'Networking'];
 
     const description3 = (
         <>
             <p>
-                Developing the Orange Pi 5 Plus Setup and Configuration Document in Markdown enhanced my skills in technical writing and documentation. 
-                I gained proficiency in structuring complex information into clear, step-by-step instructions, ensuring ease of understanding for readers at all skill levels. 
-                Through this project, I honed my skills in system configuration, documentation with Markdown, and troubleshooting hardware and software issues specific to the Orange Pi 5 Plus platform.
+                This project pushed me in a direction I had not worked in before, taking a piece of hardware and building it up from nothing into a functional, network-connected security tool. 
+                There is a lot that can go wrong when you are dealing with hardware, a new operating system, and multiple software tools that all need to talk to each other. Learning to troubleshoot 
+                at each layer of that stack, whether it was a hardware connection, a misconfigured service, or a bash command that needed to be tweaked, built a kind of patience and problem-solving instinct that is hard to develop any other way.
             </p>
-
-            <br></br>
-
+            <br />
             <p className='mb-8'>
-                This project underscored the importance of clarity and organization in technical documentation, emphasizing the need for precise instructions and comprehensive coverage of setup procedures. 
-                It also provided practical experience in self-directed learning and troubleshooting, enhancing my capability to independently research and implement solutions in technical projects.
-                This project enabled me to deepen my understanding of single-board computer setups, especially with the Orange Pi 5 Plus. 
-                I gained proficiency in documenting technical processes using Markdown efficiently. Moreover, troubleshooting challenges during setup improved my problem-solving abilities in hardware and software integration.
+                Writing the documentation was just as valuable as building the device itself. I had to think carefully about how to explain each step in a way that someone unfamiliar with the hardware 
+                could follow without getting lost. That meant anticipating confusion, explaining the why behind each step, not just the what, and organizing everything so it flows logically from start to finish. 
+                It is a skill set that is directly applicable to real security work, where clear documentation can be just as important as the technical work it describes.
             </p>
         </>
     );
 
     return (
         <div>
-            <ProjectRoute 
+            <ProjectRoute
                 image={ProjectImage}
                 title="Orange Pi 5 Plus Setup"
                 planguage="Markdown Documentation"
@@ -46,10 +49,11 @@ const PSUHomecomingWebsite = () => {
                 description2={description2}
                 subtitle3="What I Learned"
                 description3={description3}
-                codebutton=''
+                codebutton='https://github.com/Steven6Brown/Orange-Pi-5-Plus-Setup-Guide'
+                codebuttonlabel='View Documentation'
             />
         </div>
-  );
+    );
 };
 
-export default PSUHomecomingWebsite;
+export default OrangePi5PlusSetup;
