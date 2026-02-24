@@ -16,14 +16,14 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
         <div className="flex flex-col min-h-screen bg-gradient-to-b from-h-black to-[#222222]">
             
             {/* Back Button - Top */}
-            <div className="container pt-10">
+            {/* <div className="container pt-10">
                 <Link href={'/#projects'}>
                     <button className='flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200 group'>
                         <IoArrowBackOutline className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-200" />
                         <span className="text-sm font-semibold">Back to Projects</span>
                     </button>
                 </Link>
-            </div>
+            </div> */}
 
             {/* Image Banner Section */}
             <div className="relative w-full h-80 mt-4">

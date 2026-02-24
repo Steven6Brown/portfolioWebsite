@@ -37,7 +37,8 @@ const PSUHomecomingWebsite = () => {
                 description2={description2}
                 subtitle3="What I Learned"
                 description3={description3}
-                codebutton=''
+                codebutton='https://homecoming.psu.edu'
+                codebuttonlabel='Penn State Homecoming Website'
             />
         </div>
   );
