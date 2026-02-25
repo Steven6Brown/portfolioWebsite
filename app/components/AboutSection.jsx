@@ -3,6 +3,7 @@ import React, { useTransition, useState, useEffect } from 'react';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ProfileImage } from './ProfileImage';
 
 const TAB_DATA = [
     {
@@ -226,13 +227,7 @@ export const AboutSection = () => {
 
                 {/* Photo - fades in from right */}
                 <div className='flex justify-center pl-8' data-aos="fade-left" data-aos-delay="200">
-                    <Image 
-                        className='shadow-black shadow-lg rounded-full'
-                        src='/images/about/about-image4.png' 
-                        width={450} 
-                        height={450}
-                        alt='Steven Brown'
-                    />
+                    <ProfileImage />
                 </div>
             </div>
         </section>
