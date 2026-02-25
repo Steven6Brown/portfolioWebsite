@@ -1,13 +1,40 @@
-import React from "react";
+'use client';
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
+  const cardRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const rotateX = ((y - cy) / cy) * -8;
+    const rotateY = ((x - cx) / cx) * 8;
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    card.style.transition = 'transform 0.1s ease';
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
+    card.style.transition = 'transform 0.5s ease';
+  };
+
   return (
     <Link href={pageUrl} aria-label={`${title} Page`}>
-      <div className="flex flex-col rounded-xl overflow-hidden shadow-xl shadow-black bg-[#1a1a1a] group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-
-        {/* Image container - forced 16:9 aspect ratio */}
+      <div
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="flex flex-col rounded-xl overflow-hidden shadow-xl shadow-black bg-[#1a1a1a] group cursor-pointer"
+        style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+      >
+        {/* Image container */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
           <Image
             src={imgUrl}
@@ -16,14 +43,16 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
             style={{ objectFit: "cover" }}
             className="group-hover:scale-105 transition-transform duration-500"
           />
+          {/* Shine overlay on tilt */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 60%)' }}
+          />
         </div>
 
-        {/* Card text below image */}
+        {/* Card text */}
         <div className="p-5 flex flex-col gap-2">
           <div className="w-8 h-1 rounded-full bg-gradient-to-r from-p-green to-s-blue" />
-          <h3 className="text-white text-lg font-bold tracking-wide">
-            {title}
-          </h3>
+          <h3 className="text-white text-lg font-bold tracking-wide">{title}</h3>
           <p className="text-gray-400 text-sm">{description}</p>
           <p className="text-sm font-semibold mt-1"
             style={{
@@ -35,35 +64,9 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
             View Project →
           </p>
         </div>
-
       </div>
     </Link>
   );
 };
 
 export default ProjectCard;
-// import Image from 'next/image';
-
-// const ProjectCard = ({ imgUrl, title, description }) => {
-//   return (
-//     <div className='flex flex-col gap-8 bg-[#181818] text-white rounded-xl p-8 h-full w-full'>
-//       <div 
-//         className='h-52 md:h-72 rounded-t-xl rounded-b-xl relative'
-//       >
-//         <Image 
-//             className="rounded-xl" 
-//             src={imgUrl}
-//             fill={true}
-//             objectFit='contain'
-//         />
-//       </div>
-
-//       <div className=''>
-//         <h3>{title}</h3>
-//         <p className='text-bt-grey'>{description}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProjectCard;
