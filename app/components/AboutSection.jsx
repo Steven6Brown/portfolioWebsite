@@ -22,12 +22,16 @@ const TAB_DATA = [
                         <li>Dean's List — Fall 2022, Fall 2023, Spring 2024, Spring 2025</li>
                     </ul>
                 </div>
-                {/* <h4 className='font-bold text-white border-b mb-1'>High School</h4>
+                <h4 className='font-bold text-white border-b mb-1'>Relevant Courses</h4>
                 <div className='pl-4'>
                     <ul className='list-disc'>
-                        <li>High School Diploma — 4.0 GPA</li>
+                        <li>Networking & Telecommunications</li>
+                        <li>Security Analytics Studio</li>
+                        <li>Malware Analysis</li>
+                        <li>Information Security Management</li>
+                        <li>Spatial Analysis of Risk</li>
                     </ul>
-                </div> */}
+                </div>
             </div>
         )
     },
