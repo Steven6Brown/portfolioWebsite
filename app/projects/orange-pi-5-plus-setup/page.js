@@ -6,7 +6,7 @@ const OrangePi5PlusSetup = () => {
     const description1 = (
         <>
             <p>
-                During my internship at Digital Cloak, I was tasked with setting up and configuring an Orange Pi 5 Plus from scratch and documenting the entire process. 
+                During my cybersecurity internship, I was tasked with setting up and configuring an Orange Pi 5 Plus from scratch and documenting the entire process. 
                 The device was going to be deployed as a network monitoring node, paired with geo pucks and Kismet to passively track and capture wireless device activity on networks. 
                 Getting it properly built, configured, and integrated into the existing security infrastructure was the goal.
             </p>

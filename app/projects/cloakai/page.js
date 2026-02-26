@@ -6,7 +6,7 @@ const CloakAI = () => {
     const description1 = (
         <>
             <p>
-                CloakAI is an AI-driven tool designed to provide Digital Cloak employees with swift and accurate responses to compliance and IT-related queries. 
+                Developed during my internship, CloakAI is an AI-driven tool designed to provide employees with swift and accurate responses to compliance and IT-related queries. 
                 Leveraging the power of Artificial Intelligence (AI) and Machine Learning (ML), CloakAI ensures that users benefit from these technologies in a secure, locally-hosted environment, safeguarding sensitive data. 
                 The platform is built on Meta's open-source Llama3 model, offering extensive customization options while maintaining a user-friendly web interface through Open WebUI. 
                 This setup is hosted on a Debian 12 desktop, enabling secure remote access within the organization's network.

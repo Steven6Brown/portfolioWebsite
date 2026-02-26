@@ -1,11 +1,36 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const ProfileImage = () => {
     const blobRef = useRef(null);
     const ringRef = useRef(null);
     const ring2Ref = useRef(null);
+    const [size, setSize] = useState(520);
+
+    useEffect(() => {
+        const updateSize = () => {
+            const w = window.innerWidth;
+            let s;
+            if (w < 480) {
+                s = Math.min(w - 40, 300);
+            } else if (w < 640) {
+                s = Math.min(w - 40, 340);
+            } else if (w < 768) {
+                s = Math.min(w * 0.4, 340);
+            } else if (w < 1024) {
+                s = Math.min(w * 0.38, 380);
+            } else {
+                s = 520;
+            }
+            setSize(s);
+        };
+        updateSize();
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+
+    const blobSize = Math.round(size * (size < 400 ? 0.82 : size < 480 ? 0.84 : 0.846));
 
     useEffect(() => {
         const blobShapes = [
@@ -42,8 +67,10 @@ export const ProfileImage = () => {
     }, []);
 
     return (
-        <div className="relative flex items-center justify-center" style={{ width: 520, height: 520 }}>
-
+        <div
+            className="relative flex items-center justify-center"
+            style={{ width: size, height: size }}
+        >
             {/* Outer glow pulse */}
             <div
                 className="absolute inset-0 rounded-full"
@@ -63,8 +90,8 @@ export const ProfileImage = () => {
                 <defs>
                     <linearGradient id="ring-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%"   stopColor="#00ff88" stopOpacity="1" />
-                        <stop offset="50%"  stopColor="#00d4ff" stopOpacity="0.6" />
-                        <stop offset="100%" stopColor="#00ff88" stopOpacity="0" />
+                        <stop offset="50%"  stopColor="#00d4ff" stopOpacity="0.8" />
+                        <stop offset="100%" stopColor="#00ff88" stopOpacity="0.3" />
                     </linearGradient>
                 </defs>
                 <path
@@ -82,7 +109,7 @@ export const ProfileImage = () => {
                 ref={ring2Ref}
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 520 520"
-                style={{ transformOrigin: 'center', opacity: 0.45 }}
+                style={{ transformOrigin: 'center', opacity: 0.7 }}
             >
                 <defs>
                     <linearGradient id="ring-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -105,8 +132,8 @@ export const ProfileImage = () => {
                 ref={blobRef}
                 className="relative overflow-hidden shadow-2xl"
                 style={{
-                    width: 440,
-                    height: 440,
+                    width: blobSize,
+                    height: blobSize,
                     borderRadius: '60% 40% 70% 30% / 50% 60% 40% 55%',
                     transition: 'border-radius 1.8s ease-in-out',
                     boxShadow: '0 0 40px rgba(0, 255, 136, 0.15), 0 0 80px rgba(0, 212, 255, 0.08)',

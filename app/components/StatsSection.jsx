@@ -2,10 +2,12 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 3.83, decimals: 2, suffix: '', label: 'Major GPA', sub: 'Penn State' },
-  { value: 150, decimals: 0, suffix: '+', label: 'Documents Trained', sub: 'in CloakAI' },
-  { value: 9, decimals: 0, suffix: '+', label: 'Projects', sub: 'Completed' },
-  { value: 4, decimals: 0, suffix: 'x', label: "Dean's List", sub: 'Honors' },
+  { value: 3.83,  decimals: 2, suffix: '',   label: 'Major GPA',          sub: 'Penn State' },
+  { value: 150,   decimals: 0, suffix: '+',  label: 'Documents Trained',  sub: 'in CloakAI' },
+  { value: 10,     decimals: 0, suffix: '+',  label: 'Projects',           sub: 'Completed' },
+  { value: 4,     decimals: 0, suffix: 'x',  label: "Dean's List",        sub: 'Honors' },
+  { value: 2,     decimals: 0, suffix: '',   label: 'Minors Completed',   sub: 'SRA & IST' },
+  { value: 1,     decimals: 0, suffix: '',   label: 'NSA IST Certified',  sub: 'May 2025' },
 ];
 
 const StatCard = ({ value, decimals, suffix, label, sub, animate }) => {
@@ -25,9 +27,8 @@ const StatCard = ({ value, decimals, suffix, label, sub, animate }) => {
   }, [animate]);
 
   return (
-    <div className="relative bg-[#0e1525] border border-[#1a2535] rounded-2xl p-7 text-center overflow-hidden group
+    <div className="relative bg-[#0e1525] border border-[#1a2535] rounded-2xl p-7 text-center overflow-hidden
       hover:-translate-y-1 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(0,255,136,0.1)]">
-      {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-p-green to-s-blue" />
       <div className="text-4xl font-bold bg-gradient-to-r from-p-green to-s-blue bg-clip-text text-transparent mb-2">
         {display}
@@ -52,8 +53,8 @@ export const StatsSection = () => {
   }, []);
 
   return (
-    <div ref={ref} className="container mb-12">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div ref={ref} className="container mb-12 mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {stats.map((s, i) => (
           <StatCard key={i} {...s} animate={animate} />
         ))}

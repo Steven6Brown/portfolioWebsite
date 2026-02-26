@@ -28,7 +28,7 @@ const HeroSection = () => {
       vx: (Math.random() - 0.5) * 0.4,
       vy: (Math.random() - 0.5) * 0.4,
       size: Math.random() * 2 + 0.5,
-      opacity: Math.random() * 0.5 + 0.1,
+      opacity: Math.random() * 1 + 0.5,
       color: Math.random() > 0.5 ? '#00ff88' : '#00d4ff',
     }));
 
@@ -83,7 +83,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className='relative container overflow-hidden'>
-      {/* Particle canvas */}
+      {/* PARTICLE CANVAS */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -93,7 +93,7 @@ const HeroSection = () => {
       <div className='min-h-screen grid place-content-center relative' style={{ zIndex: 1 }}>
         <div className='flex flex-col justify-center items-center'>
 
-          {/* Main Title */}
+          {/* MAIN TITLE */}
           <div className='flex flex-col justify-center items-center'>
             <p className='text-bt-grey text-base sm:text-lg mb-6 lg:text-xl'>Thanks for stopping by!</p>
             <h1>I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-p-green to-s-blue'>Steven Brown</span></h1>

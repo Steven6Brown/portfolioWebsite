@@ -47,6 +47,14 @@ const projectsData = [
   },
   {
     id: 6,
+    title: "External Network Audit",
+    description: "External Network Security Audit Delivering a Detailed Findings and Remediation Report.",
+    image: "/images/projects/external-network-audit.png",
+    planguage: "Cybersecurity / OSINT",
+    url: "/projects/external-network-audit",
+  },
+  {
+    id: 7,
     title: "To-Do List Manager",
     description: "Task Management and Productivity Application",
     image: "/images/projects/todo-list.png",
@@ -54,7 +62,7 @@ const projectsData = [
     url: "/projects/todo-list-manager",
   },
   {
-    id: 7,
+    id: 8,
     title: "Homecoming PSU Website",
     description: "A Project To Make A Difference",
     image: "/images/projects/homecoming-psu.png",
@@ -62,7 +70,7 @@ const projectsData = [
     url: "/projects/psu-homecoming-website",
   },
   {
-    id: 8,
+    id: 9,   
     title: "DiamondStatTrax",
     description: "A Baseball Stat Tracking Application",
     image: "/images/projects/diamondstattrax.png",
@@ -70,7 +78,7 @@ const projectsData = [
     url: "/projects/diamond-stat-trax",
   },
   {
-    id: 9,
+    id: 10,
     title: "Dunkin' Donut's Networking Map",
     description: "A Networking Project For Dunkin' Donut's",
     image: "/images/projects/dunkin-network.png",
