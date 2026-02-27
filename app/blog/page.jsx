@@ -19,7 +19,7 @@ export default async function BlogPage() {
       </div>
 
       {/* Main content */}
-      <main className="container mx-auto px-4 py-24 flex-grow">
+      <main className="container mx-auto px-4 pt-36 flex-grow">
         {/* Header */}
         <div className="text-center mb-14">
           <h3 className="mb-2">
