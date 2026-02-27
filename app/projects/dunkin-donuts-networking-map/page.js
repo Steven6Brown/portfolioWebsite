@@ -40,7 +40,7 @@ const DunkinDonutsNetworkingMap = () => {
         <div>
             <ProjectRoute 
                 image={ProjectImage}
-                title="Dunkin' Donut's Networking Map"
+                title="Dunkin' Donuts Networking Map"
                 planguage="Networking"
                 subtitle1="About The Networking Map"
                 description1={description1}

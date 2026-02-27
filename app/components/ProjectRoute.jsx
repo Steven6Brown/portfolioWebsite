@@ -5,6 +5,7 @@ import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { IoArrowBackOutline } from "react-icons/io5";
+import { Footer } from '../components/Footer';
 
 const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtitle2, description2, subtitle3, description3, codebutton, codebuttonlabel }) => {
     
@@ -110,6 +111,10 @@ const ProjectRoute = ({ image, title, planguage, subtitle1, description1, subtit
                     )}
                 </div>
             </div>
+
+            {/* Footer */}
+            <Footer />
+
         </div>
     );
 };

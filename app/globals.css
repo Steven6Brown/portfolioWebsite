@@ -18,11 +18,11 @@ h2 {
 }
 
 h1 {
-  @apply text-4xl lg:text-6xl /* Title (HERO) */
+  @apply text-4xl lg:text-6xl
 }
 
 h2 {
-  @apply text-3xl lg:text-5xl /* Title and Section Header (TYPE ANIMATION, "BEHIND THE SCENES", "MY ABILITIES") */
+  @apply text-3xl lg:text-5xl
 }
 
 h3,
@@ -31,17 +31,16 @@ h4 {
 }
 
 h3 {
-  @apply text-2xl lg:text-4xl /* Page Title (ABOUT, PROJECTS, SKILLS, CONNECT) */
+  @apply text-2xl lg:text-4xl
 }
 
 h4 {
-  @apply text-xl lg:text-xl /* Tab Header (ABOUT INFORMATION TABS) */
+  @apply text-xl lg:text-xl
 }
 
 button {
   @apply hover:scale-105 ease-in duration-200
 }
-
 
 /* Section Spacing */
 #about {
@@ -68,3 +67,28 @@ button {
 button:hover span {
   color: black;
 }
+
+/* Blog post content styles */
+.blog-content h1, .blog-content h2, .blog-content h3, 
+.blog-content h4, .blog-content h5, .blog-content h6 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.blog-content h1 { font-size: 2rem; }
+.blog-content h2 { font-size: 1.5rem; }
+.blog-content h3 { font-size: 1.25rem; }
+.blog-content p { margin-bottom: 1rem; color: #ADB7BE; }
+.blog-content a { color: #63fc66; text-decoration: none; }
+.blog-content a:hover { text-decoration: underline; }
+.blog-content strong { color: #ffffff; }
+.blog-content ul, .blog-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #ADB7BE; }
+.blog-content ul { list-style-type: disc; }
+.blog-content ol { list-style-type: decimal; }
+.blog-content li { margin-bottom: 0.25rem; }
+.blog-content code { color: #63fc66; background: rgba(255,255,255,0.05); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.875rem; }
+.blog-content pre { background: #121212; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; overflow-x: auto; margin-bottom: 1rem; }
+.blog-content pre code { background: none; padding: 0; }
+.blog-content blockquote { border-left: 3px solid #63fc66; padding-left: 1rem; color: #ADB7BE; margin-bottom: 1rem; }
+.blog-content hr { border-color: rgba(255,255,255,0.1); margin: 2rem 0; }

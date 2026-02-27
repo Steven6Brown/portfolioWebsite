@@ -21,7 +21,6 @@ const HeroSection = () => {
     resize();
     window.addEventListener('resize', resize);
 
-    // Create particles
     const particles = Array.from({ length: 80 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -35,7 +34,6 @@ const HeroSection = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw connection lines between nearby particles
       particles.forEach((p, i) => {
         particles.slice(i + 1).forEach(p2 => {
           const dx = p.x - p2.x;
@@ -52,18 +50,13 @@ const HeroSection = () => {
         });
       });
 
-      // Draw particles
       particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = p.color + Math.floor(p.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
-
-        // Move
         p.x += p.vx;
         p.y += p.vy;
-
-        // Wrap around edges
         if (p.x < 0) p.x = canvas.width;
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;
@@ -83,7 +76,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className='relative w-full overflow-hidden'>
-      {/* PARTICLE CANVAS */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none"
@@ -145,6 +137,15 @@ const HeroSection = () => {
             </div>
           </div>
 
+          {/* OPEN TO WORK BADGE */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/40 bg-green-500/10 text-green-400 text-sm font-medium mt-6">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+            </span>
+            Open to Work — Cybersecurity &amp; AI Roles
+          </div>
+          
         </div>
       </div>
     </section>

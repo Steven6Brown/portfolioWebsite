@@ -79,7 +79,7 @@ const projectsData = [
   },
   {
     id: 10,
-    title: "Dunkin' Donut's Networking Map",
+    title: "Dunkin' Donuts Networking Map",
     description: "A Networking Project For Dunkin' Donut's",
     image: "/images/projects/dunkin-network.png",
     tag: ["All", "Web"],
