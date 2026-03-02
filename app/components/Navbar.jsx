@@ -46,13 +46,15 @@ export const Navbar = () => {
     }
   };
 
+  const bgStyle = {
+    backgroundColor: hasScrolled || navbarOpen ? 'rgba(17,17,17,0.95)' : 'transparent',
+    boxShadow: hasScrolled ? '0 4px 12px rgba(0,0,0,0.8)' : 'none',
+  };
+
   return (
     <nav
       className="fixed top-0 z-50 w-full transition-all duration-300"
-      style={{
-        backgroundColor: hasScrolled ? 'rgba(17,17,17,0.95)' : 'transparent', // slightly darker
-        boxShadow: hasScrolled ? '0 4px 12px rgba(0,0,0,0.8)' : 'none',
-      }}
+      style={bgStyle}
     >
       <div className="flex flex-wrap items-center justify-between mx-auto p-8 sm:px-6 md:px-20 w-full">
         <Link href="/#home" className="flex items-center justify-center">
@@ -97,7 +99,11 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen && (
+        <div>
+          <MenuOverlay links={navLinks} />
+        </div>
+      )}
     </nav>
   );
 };
