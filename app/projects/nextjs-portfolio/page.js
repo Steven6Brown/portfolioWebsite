@@ -39,6 +39,15 @@ const NextjsPortfolio = () => {
             <br></br>
 
             <p>
+                For hosting, I chose Vercel — the platform built by the same team behind Next.js. 
+                Connecting my GitHub repository took minutes, and from that point every push to the main branch automatically 
+                triggers a new deployment with zero manual configuration. Vercel handles SSL certificates, a global CDN, 
+                and performance monitoring out of the box, making it the ideal choice for a Next.js project.
+            </p>
+
+            <br></br>
+
+            <p>
                 Overall, this project has been a valuable learning experience that has deepened my understanding of web development and design principles. 
                 It has equipped me with the skills and confidence to tackle more complex projects in the future, and it stands as a testament to my growth and dedication as a self-taught developer.
             </p>
@@ -63,6 +72,15 @@ const NextjsPortfolio = () => {
                 Managing this project over several months taught me valuable project management skills, including setting milestones, managing time effectively, and prioritizing tasks to keep the project on track. 
                 Finally, creating a polished portfolio required meticulous attention to detail, from pixel-perfect alignment to smooth animations, reinforcing the importance of fine-tuning every aspect of the design. 
                 This project not only resulted in a professional portfolio that I am proud of but also significantly advanced my skills as a web developer, preparing me for future projects and challenges in the field.
+            </p>
+
+            <br></br>
+
+            <p>
+                Deploying with Vercel taught me how modern CI/CD pipelines work in practice. 
+                Every commit to GitHub automatically builds and deploys the site — no manual steps, no server management. 
+                It gave me firsthand experience with a professional deployment workflow and a deep appreciation for how much 
+                infrastructure Vercel abstracts away compared to traditional hosting providers.
             </p>
         </>
     );
