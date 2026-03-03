@@ -37,7 +37,7 @@ export default async function BlogPage() {
         {posts.length === 0 ? (
           <p className="text-center text-bt-grey mt-20">No posts yet — check back soon.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
             {posts.map((post) => (
               <Link
                 key={post.slug}
