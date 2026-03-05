@@ -56,28 +56,10 @@ export default function BlogPostClient({ post }) {
                 className="blog-content text-bt-grey leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: post.contentHtml }}
               />
-              <style>{`
-                .blog-content h2, .blog-content h3 {
-                  position: relative;
-                  display: inline-block;
-                  color: white;
-                  margin-top: 2rem;
-                  margin-bottom: 0.5rem;
-                }
-                .blog-content h2::after, .blog-content h3::after {
-                  content: '';
-                  display: block;
-                  height: 3px;
-                  width: 100%;
-                  margin-top: 0.5rem;
-                  border-radius: 2px;
-                  background: linear-gradient(to right, #22c55e, #3b82f6);
-                }
-              `}</style>
             </div>
           </div>
 
-          {/* Back button — outside the border */}
+          {/* Back button */}
           <div className="mb-10" data-aos="fade-up" data-aos-delay="200">
             <Link href="/blog">
               <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#1a1a1a] border border-gray-700 text-gray-300 hover:text-white hover:border-p-green transition-all duration-200">
