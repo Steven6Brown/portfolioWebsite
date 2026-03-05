@@ -7,7 +7,7 @@ const DunkinDonutsNetworkingMap = () => {
     const description1 = (
         <>
             <p>
-                The networking map for Dunkin' Donuts' multiple locations in New York, New York outlines the key components and structure necessary to support their operations. 
+                The networking map for Dunkin' Donuts' multiple locations in New York, New York, outlines the key components and structure necessary to support their operations. 
                 It includes the Main Site with a star topology, secure Site-to-Site connectivity between stores, and an in-depth layout of devices and network components. 
                 We have utilized Verizon FIOS as the ISP, implementing private IP addresses for the VPN and securing all transactions with encryption. 
                 The design also integrates both wired and wireless connectivity solutions, ensuring seamless communication between various systems like kiosks, mobile ordering, and VoIP services. 

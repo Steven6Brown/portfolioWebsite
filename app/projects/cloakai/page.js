@@ -43,7 +43,7 @@ const CloakAI = () => {
 
             <p>
                 Through the development of CloakAI, I learned the importance of balancing powerful AI/ML capabilities with strict data security measures, ensuring that the organization can reap the benefits of AI without compromising sensitive information. 
-                I also gained experience in integrating user-friendly interfaces with complex backend systems, and the significance of effective user management in a secure, AI-powered environment. 
+                I also gained experience in integrating user-friendly interfaces with complex backend systems and the significance of effective user management in a secure, AI-powered environment. 
                 Finally, I enhanced my understanding of deploying and maintaining AI systems in a secure, isolated network, ensuring reliable remote access for users.
             </p>
         </>

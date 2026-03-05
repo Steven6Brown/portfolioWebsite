@@ -39,8 +39,8 @@ const NextjsPortfolio = () => {
             <br></br>
 
             <p>
-                For hosting, I chose Vercel — the platform built by the same team behind Next.js. 
-                Connecting my GitHub repository took minutes, and from that point every push to the main branch automatically 
+                For hosting, I chose Vercel; the platform built by the same team behind Next.js. 
+                Connecting my GitHub repository took minutes, and from that point. every push to the main branch automatically 
                 triggers a new deployment with zero manual configuration. Vercel handles SSL certificates, a global CDN, 
                 and performance monitoring out of the box, making it the ideal choice for a Next.js project.
             </p>
@@ -78,7 +78,7 @@ const NextjsPortfolio = () => {
 
             <p>
                 Deploying with Vercel taught me how modern CI/CD pipelines work in practice. 
-                Every commit to GitHub automatically builds and deploys the site — no manual steps, no server management. 
+                Every commit to GitHub automatically builds and deploys the site; no manual steps, no server management. 
                 It gave me firsthand experience with a professional deployment workflow and a deep appreciation for how much 
                 infrastructure Vercel abstracts away compared to traditional hosting providers.
             </p>

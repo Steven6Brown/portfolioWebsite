@@ -8,7 +8,7 @@ const PSUHomecomingWebsite = () => {
         <>
             <p>
                 The Security Operations Center (SOC) setup project is a collaborative effort aimed at establishing a robust infrastructure for monitoring and analyzing network security events in real-time. 
-                Leveraging a combination of Dockerized applications and hardware components including Orange Pi 5 Plus, Raspberry Pi, ALFA WiFi Card, and RTL-SDR, our team designed a scalable and efficient SOC environment.
+                Leveraging a combination of Dockerized applications and hardware components, including Orange Pi 5 Plus, Raspberry Pi, ALFA WiFi Card, and RTL-SDR, our team designed a scalable and efficient SOC environment.
             </p>
         </>
     );

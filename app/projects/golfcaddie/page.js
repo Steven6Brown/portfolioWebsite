@@ -8,7 +8,7 @@ const GolfCaddie = () => {
             <p>
                 GolfCaddie is an AI-powered iOS golf assistant built in Swift, designed to be the ultimate 
                 on-course companion for golfers of all skill levels. The app goes far beyond a simple 
-                rangefinder — it combines real-time environmental data, course topology, and personalized 
+                rangefinder; it combines real-time environmental data, course topology, and personalized 
                 user profiles to deliver intelligent club recommendations and strategic advice for every shot.
             </p>
 
@@ -41,8 +41,8 @@ const GolfCaddie = () => {
 
             <p className='mb-8'>
                 This project deepened my understanding of how AI can be applied to real-world, domain-specific 
-                problems. Designing the recommendation engine to account for so many variables — weather, 
-                elevation, distance, and individual club performance — taught me the importance of data 
+                problems. Designing the recommendation engine to account for so many variables, such as weather, 
+                elevation, distance, and individual club performance, taught me the importance of data 
                 modeling and personalization in AI systems. Building the social and progress tracking features 
                 also gave me valuable experience in designing user-centered applications that keep people 
                 engaged over time. GolfCaddie is an ongoing project that continues to grow in features and complexity.

@@ -6,15 +6,14 @@ const OrangePi5PlusSetup = () => {
     const description1 = (
         <>
             <p>
-                During my cybersecurity internship, I was tasked with setting up and configuring an Orange Pi 5 Plus from scratch and documenting the entire process. 
-                The device was going to be deployed as a network monitoring node, paired with geo pucks and Kismet to passively track and capture wireless device activity on networks. 
-                Getting it properly built, configured, and integrated into the existing security infrastructure was the goal.
+                During my cybersecurity internship, I set up and configured an Orange Pi 5 Plus from scratch and documented the entire process. I prepared the device for deployment as a network monitoring node, 
+                paired it with geo pucks and Kismet, and used it to passively track and capture wireless device activity on networks. I built, configured, and integrated it into the existing security infrastructure.
             </p>
             <br />
             <p>
-                The setup covers everything from physical hardware assembly, installing the eMMC module, heat sinks, NVMe SSD, and WiFi card, to flashing the Armbian operating system, 
-                configuring Kismet for both WiFi and RTL-SDR capture, and setting up Metricbeat to ship system metrics back to the team's ELK Stack for real-time monitoring. 
-                I also wrote a full setup and configuration guide in Markdown that walks through every step in detail, complete with diagrams and bash commands, so that anyone on the team could replicate the setup independently.
+                I assembled the physical hardware, installed the eMMC module, heat sinks, NVMe SSD, and WiFi card, flashed the Armbian operating system, configured Kismet for both WiFi and RTL-SDR capture, 
+                and set up Metricbeat to ship system metrics back to the team's ELK Stack for real-time monitoring. I also wrote a comprehensive setup and configuration guide in Markdown that details every step, 
+                complete with diagrams and bash commands, enabling anyone on the team to replicate the setup independently.
             </p>
         </>
     );

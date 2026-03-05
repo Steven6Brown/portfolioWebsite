@@ -179,23 +179,23 @@ export const AboutSection = () => {
                     data-aos-delay="100"
                 >
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
-                        I'm Steven Brown, a Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, graduating with a 3.83 major GPA and earning 
-                        both the Vice Provost Award and multiple Dean's List honors. I also completed two minors in Security Risk Analysis (SRA) and Information Systems Technology (IST), 
+                        I'm Steven Brown, a Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, graduating with a 3.83 major GPA and earning both the 
+                        Vice Provost Award and multiple Dean's List honors. I also completed two minors in Security Risk Analysis (SRA) and Information Systems Technology (IST), 
                         strengthening my foundation in risk assessment, systems, and applied technology. I hold an NSA IST Certification and have hands-on experience in AI implementation, 
                         security infrastructure, and compliance frameworks, including NIST SP 800, CMMC, and OSINT.
                     </p>
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
                         My passion for technology began early and has continued to grow through hands-on experience in cybersecurity and applied AI. 
-                        During my internship at Digital Cloak LLC, I designed and trained a locally hosted AI cybersecurity compliance assistant, CloakAI, 
-                        built from more than 150 regulatory and security documents to support analyst decision-making while maintaining strict data privacy. 
+                        During my internship at Digital Cloak LLC, I designed and trained CloakAI, a locally hosted AI cybersecurity compliance assistant, 
+                        built from over 150 regulatory and security documents to support analyst decision-making while maintaining strict data privacy. 
                         I also contributed to compliance workflows aligned with NIST SP 800, CMMC, incident response, and OSINT best practices. 
-                        In parallel, I am developing GolfCaddie, an AI-powered personal golf assistant that delivers real-time shot advice and personalized club 
-                        recommendations using PGA rules, swing training documentation, and user-specific performance data, allowing me to apply machine learning and 
-                        software engineering principles beyond traditional security use cases.
+                        In parallel, I am developing GolfCaddie, an AI-powered personal golf assistant that delivers real-time shot advice and personalized club recommendations, 
+                        utilizing PGA rules, swing training documentation, and user-specific performance data. This enables me to apply machine learning and software engineering 
+                        principles beyond traditional security use cases.
                     </p>
                     <p className='text-base md:text-md'>
                         When I'm not immersed in tech, you'll find me exploring the outdoors, camping, fishing, or hitting the trails, or playing music on one of my many instruments. 
-                        I bring the same curiosity, energy, and leadership to my work, whether managing a team at Men's Wearhouse or tackling a challenging cybersecurity problem. 
+                        I bring the same curiosity, energy, and leadership to my work, whether managing a team at Men's Wearhouse or tackling complex cybersecurity challenges. 
                         I'm passionate about learning and love diving into new skills and interests, always eager to explore pretty much everything that catches my attention.
                     </p>
 

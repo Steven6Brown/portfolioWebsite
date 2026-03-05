@@ -6,9 +6,9 @@ const ExternalNetworkAudit = () => {
     const description1 = (
         <>
             <p>
-                During my internship, I was tasked with conducting an independent external network audit of my internships corporate infrastructure. 
+                During my internship, I was tasked with conducting an independent external network audit of my internship's corporate infrastructure. 
                 This was a real engagement, not a classroom exercise, meaning I was working against a live network with actual rules of engagement in place. 
-                The assessment took place over three days in June 2024 and covered two of the organizations external-facing URLs.
+                The assessment took place over three days in June 2024 and covered two of the organization's external-facing URLs.
             </p>
             <br />
             <p>
