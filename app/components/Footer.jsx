@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const Footer = () => {
   return (
-    <footer className='footer border border-t-e-border border-l-transparent border-r-transparent text-white'>
+    <footer className='footer border-t border-t-e-border text-white'>
         <div className='container p-8 flex flex-col sm:flex-row items-center justify-between gap-4'>
             <span>
               <Link href={"/#home"} className='flex items-center justify-center'>
