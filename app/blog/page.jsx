@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllPosts } from "../../lib/blog";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import TypingText from "./TypingText";
 
 export const metadata = {
   title: "Blog",
@@ -13,14 +14,10 @@ export default async function BlogPage() {
 
   return (
     <div className="blog-page bg-gradient-to-b from-h-black to-[#222222] min-h-screen flex flex-col">
-      {/* Navbar */}
       <div className="sticky top-0 z-10">
         <Navbar />
       </div>
-
-      {/* Main content */}
       <main className="container mx-auto px-4 pt-36 flex-grow">
-        {/* Header */}
         <div className="text-center mb-14">
           <h3 className="mb-2">
             <span className="bg-gradient-to-r from-p-green to-s-blue text-transparent bg-clip-text inline-block">
@@ -28,12 +25,11 @@ export default async function BlogPage() {
             </span>
           </h3>
           <h2 className="text-white">Blog</h2>
+          <TypingText />
           <p className="text-bt-grey text-lg max-w-xl mx-auto mt-4">
             Cybersecurity breakdowns, tool reviews, and lessons from building AI-powered security tools.
           </p>
         </div>
-
-        {/* Blog posts */}
         {posts.length === 0 ? (
           <p className="text-center text-bt-grey mt-20">No posts yet — check back soon.</p>
         ) : (
@@ -55,14 +51,10 @@ export default async function BlogPage() {
                     maskComposite: 'exclude',
                   }}
                 />
-                {/* Tags */}
                 {post.tags?.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-3">
                     {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#121212] border border-gray-700 text-gray-300 hover:border-p-green hover:text-white transition-colors duration-200"
-                      >
+                      <span key={tag} className="px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#121212] border border-gray-700 text-gray-300 hover:border-p-green hover:text-white transition-colors duration-200">
                         {tag}
                       </span>
                     ))}
@@ -86,8 +78,6 @@ export default async function BlogPage() {
           </div>
         )}
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
