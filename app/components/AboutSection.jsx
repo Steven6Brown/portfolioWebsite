@@ -186,7 +186,7 @@ export const AboutSection = () => {
                     </p>
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
                         My passion for technology began early and has continued to grow through hands-on experience in cybersecurity and applied AI. 
-                        During my internship at Digital Cloak LLC, I designed and trained CloakAI, a locally hosted AI cybersecurity compliance assistant, 
+                        During my internship, I designed and trained CloakAI, a locally hosted AI cybersecurity compliance assistant, 
                         built from over 150 regulatory and security documents to support analyst decision-making while maintaining strict data privacy. 
                         I also contributed to compliance workflows aligned with NIST SP 800, CMMC, incident response, and OSINT best practices. 
                         In parallel, I am developing GolfCaddie, an AI-powered personal golf assistant that delivers real-time shot advice and personalized club recommendations, 
