@@ -19,7 +19,8 @@ const PSUHomecomingWebsite = () => {
     const description3 = (
         <>
             <p className='mb-8'>
-                Working on the Penn State Homecoming website provided invaluable experience in team collaboration and project management within a structured timeline. I honed my skills in WordPress customization, mastering plugins and theme development to meet specific design and functionality requirements. Utilizing Elementor, I gained proficiency in designing responsive layouts and implementing interactive elements without compromising on performance or user experience. 
+                Working on the Penn State Homecoming website provided invaluable experience in team collaboration and project management within a structured timeline. I honed my skills in WordPress customization, mastering plugins and 
+                theme development to meet specific design and functionality requirements. Utilizing Elementor, I gained proficiency in designing responsive layouts and implementing interactive elements without compromising on performance or user experience. 
                 This project underscored the importance of clear communication, agile development practices, and adaptability in achieving collective goals, setting a benchmark for future collaborative endeavors in web development.
             </p>
         </>
