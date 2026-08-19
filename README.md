@@ -1,4 +1,4 @@
-![portfolioWebsite](./sb-logo-text-horizontal.png)
+![portfolioWebsite](./public/images/footer/sb-logo-text-horizontal.png)
 
 # stevenrbrown.org
 
