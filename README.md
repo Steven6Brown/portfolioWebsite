@@ -2,7 +2,7 @@
 
 # stevenrbrown.org
 
-Source code for my personal portfolio website — [stevenrbrown.org](https://www.stevenrbrown.org). Built to showcase my background in cybersecurity and AI, my projects, and my path through Penn State's Cybersecurity Analytics and Operations program.
+Source code for my personal portfolio website - [stevenrbrown.org](https://www.stevenrbrown.org). Built to showcase my background in cybersecurity and AI, my projects, and my path through Penn State's Cybersecurity Analytics and Operations program.
 
 This isn't a template or a tool meant for others to use — it's the actual code behind my live site.
 
