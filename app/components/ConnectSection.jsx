@@ -104,7 +104,7 @@ const ConnectSection = () => {
                 {emailSubmitted ? (
                     <div className='text-center p-8 bg-[#1a1a1a] rounded-xl border border-gray-800'>
                         <h3 className='text-p-green mb-2'>Message Sent!</h3>
-                        <p className='text-gray-400'>Thanks for reaching out — I'll get back to you as soon as possible!</p>
+                        <p className='text-gray-400'>Thanks for reaching out - I'll get back to you as soon as possible!</p>
                     </div>
                 ) : (
                     <form className='flex flex-col gap-4 bg-[#1a1a1a] p-8 rounded-xl border border-gray-800' onSubmit={handleSubmit}>
