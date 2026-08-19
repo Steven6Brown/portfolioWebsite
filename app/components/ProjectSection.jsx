@@ -7,6 +7,22 @@ import 'aos/dist/aos.css';
 const projectsData = [
   {
     id: 1,
+    title: "QuoteWork",
+    description: "Client Estimate & Invoice Generator for Aquila Digital",
+    image: "/images/projects/quotework.png",
+    tag: ["All", "Web", "Tools"],
+    url: "/projects/quotework",
+  },
+  {
+    id: 2,
+    title: "Finio",
+    description: "Privacy-First Personal Budget Tracker iOS App",
+    image: "/images/projects/finio.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/finio",
+  },
+  {
+    id: 3,
     title: "GolfCaddie",
     description: "Your Personal Golf Assistant",
     image: "/images/projects/golfcaddie2.png",
@@ -14,7 +30,7 @@ const projectsData = [
     url: "/projects/golfcaddie",
   },
   {
-    id: 2,
+    id: 4,
     title: "CloakAI",
     description: "An AI Cybersecurity-Focused Compliancy ChatBot",
     image: "/images/projects/cloakai.png",
@@ -22,7 +38,7 @@ const projectsData = [
     url: "/projects/cloakai",
   },
   {
-    id: 3,
+    id: 5,
     title: "Nextjs Portfolio Website",
     description: "A Learning Achievement - Portfolio Website",
     image: "/images/projects/portfolio-website.png",
@@ -30,7 +46,7 @@ const projectsData = [
     url: "/projects/nextjs-portfolio",
   },
   {
-    id: 4,
+    id: 6,
     title: "Security Operations Center",
     description: "A SOC Setup For An Internship Project",
     image: "/images/projects/soc.png",
@@ -38,7 +54,7 @@ const projectsData = [
     url: "/projects/security-operations-center",
   },
   {
-    id: 5,
+    id: 7,
     title: "Orange Pi 5 Plus Setup",
     description: "Documentation On How to Setup An Orange Pi 5 Plus",
     image: "/images/projects/orange-pi.png",
@@ -46,15 +62,15 @@ const projectsData = [
     url: "/projects/orange-pi-5-plus-setup",
   },
   {
-    id: 6,
+    id: 8,
     title: "External Network Audit",
     description: "External Network Security Audit Delivering a Detailed Findings and Remediation Report.",
     image: "/images/projects/external-network-audit.png",
-    planguage: "Cybersecurity / OSINT",
+    tag: ["All", "Web"],
     url: "/projects/external-network-audit",
   },
   {
-    id: 7,
+    id: 9,
     title: "To-Do List Manager",
     description: "Task Management and Productivity Application",
     image: "/images/projects/todo-list.png",
@@ -62,7 +78,7 @@ const projectsData = [
     url: "/projects/todo-list-manager",
   },
   {
-    id: 8,
+    id: 10,
     title: "Homecoming PSU Website",
     description: "A Project To Make A Difference",
     image: "/images/projects/homecoming-psu.png",
@@ -70,7 +86,7 @@ const projectsData = [
     url: "/projects/psu-homecoming-website",
   },
   {
-    id: 9,   
+    id: 11,
     title: "DiamondStatTrax",
     description: "A Baseball Stat Tracking Application",
     image: "/images/projects/diamondstattrax.png",
@@ -78,13 +94,13 @@ const projectsData = [
     url: "/projects/diamond-stat-trax",
   },
   {
-    id: 10,
+    id: 12,
     title: "Dunkin' Donuts Networking Map",
     description: "A Networking Project For Dunkin' Donut's",
     image: "/images/projects/dunkin-network.png",
     tag: ["All", "Web"],
     url: "/projects/dunkin-donuts-networking-map",
-  }
+  },
 ];
 
 const ProjectSection = () => {
