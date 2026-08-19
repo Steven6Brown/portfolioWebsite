@@ -55,7 +55,7 @@ const ConnectSection = () => {
                 <h2 className='text-white mb-3'>Let's Connect</h2>
                 <p className='text-bt-grey mb-4 max-w-md mx-auto'>
                     I'm actively looking for new opportunities in cybersecurity and AI. 
-                    Whether you have a question, an opportunity, or just want to say hello — 
+                    Whether you have a question, an opportunity, or just want to say hello - 
                     my inbox is always open!
                 </p>
 
