@@ -1,3 +1,5 @@
+![portfolioWebsite](./sb-logo-text-horizontal.png)
+
 # stevenrbrown.org
 
 Source code for my personal portfolio website — [stevenrbrown.org](https://www.stevenrbrown.org). Built to showcase my background in cybersecurity and AI, my projects, and my path through Penn State's Cybersecurity Analytics and Operations program.
