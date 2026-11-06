@@ -43,7 +43,7 @@ const TAB_DATA = [
                 <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Business</h3>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
-                        <li>Aquila Digital LLC, Founder and CEO (2026 to Present)</li>
+                        <li>Aquila Digital, Founder and CEO (2026 to Present)</li>
                     </ul>
                 </div>
                 <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Technical Experience</h3>
