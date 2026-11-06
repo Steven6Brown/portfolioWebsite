@@ -12,7 +12,7 @@ export const metadata = {
     template: "%s | Steven Brown",
   },
   description:
-    "Penn State cybersecurity graduate (B.S. CAO, 3.83 GPA, NSA IST Certification). " +
+    "Founder and CEO of Aquila Digital LLC and Penn State cybersecurity graduate (B.S. CAO, 3.83 GPA, NSA IST Certification). " +
     "Specializing in AI-driven security tools, NIST SP 800 & CMMC compliance, and security infrastructure. " +
     "Available for cybersecurity and AI engineering roles.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata = {
         url: "https://www.stevenrbrown.org/images/og-preview.png",
         width: 1200,
         height: 630,
-        alt: "Steven Brown — Cybersecurity & AI Professional",
+        alt: "Steven Brown, Cybersecurity & AI Professional",
       },
     ],
   },
@@ -47,17 +47,46 @@ export const metadata = {
     card: "summary_large_image",
     title: "Steven Brown | Cybersecurity & AI Professional",
     description:
-      "Penn State cybersecurity grad — building AI security tools, working with NIST/CMMC.",
+      "Penn State cybersecurity grad building AI security tools and working with NIST/CMMC.",
     images: ["https://www.stevenrbrown.org/images/og-preview.png"],
   },
   alternates: { canonical: "https://www.stevenrbrown.org" },
   robots: { index: true, follow: true },
 };
 
+// Structured data so search engines understand who this site is about.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Steven Brown",
+  url: "https://www.stevenrbrown.org",
+  jobTitle: "Founder and CEO",
+  worksFor: {
+    "@type": "Organization",
+    name: "Aquila Digital LLC",
+    url: "https://www.aquiladigital.net",
+  },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "The Pennsylvania State University" },
+  sameAs: [
+    "https://www.linkedin.com/in/steven-b-4a699b218/",
+    "https://github.com/Steven6Brown",
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={dm.className}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+        >
+          Skip to main content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
         <SpeedInsights />
         <Analytics />

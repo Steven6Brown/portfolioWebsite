@@ -6,6 +6,30 @@ import 'aos/dist/aos.css';
 
 const projectsData = [
   {
+    id: 13,
+    title: "TalonForge",
+    description: "A Free, Hands-On Learning Platform for Coding, Security and IT Careers",
+    image: "/images/projects/talonforge.jpg",
+    tag: ["All", "Web", "Tools"],
+    url: "/projects/talonforge",
+  },
+  {
+    id: 14,
+    title: "Kestrel",
+    description: "Finds Local Businesses Without a Website and Drafts Outreach for Human Review",
+    image: "/images/projects/kestrel.jpg",
+    tag: ["All", "Web", "Tools"],
+    url: "/projects/kestrel",
+  },
+  {
+    id: 15,
+    title: "Vantage",
+    description: "A Private Console for the Cybersecurity Job Market",
+    image: "/images/projects/vantage.jpg",
+    tag: ["All", "Web", "Tools"],
+    url: "/projects/vantage",
+  },
+  {
     id: 1,
     title: "QuoteWork",
     description: "Client Estimate & Invoice Generator for Aquila Digital",
@@ -30,6 +54,54 @@ const projectsData = [
     url: "/projects/golfcaddie",
   },
   {
+    id: 16,
+    title: "Corredo",
+    description: "A Trail Gear Inventory and Packing Kit App for iPhone and iPad",
+    image: "/images/projects/corredo.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/corredo",
+  },
+  {
+    id: 17,
+    title: "Stellata",
+    description: "A Backpacking App That Maps Where to Camp Along the Trail",
+    image: "/images/projects/stellata.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/stellata",
+  },
+  {
+    id: 18,
+    title: "Pinstash",
+    description: "A Private Log for Fishing and Hunting Spots",
+    image: "/images/projects/pinstash.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/pinstash",
+  },
+  {
+    id: 19,
+    title: "TrailMix",
+    description: "A Native iOS Dating App for Outdoor Enthusiasts",
+    image: "/images/projects/trailmix.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/trailmix",
+  },
+  {
+    id: 20,
+    title: "Redline",
+    description: "An iOS Prototype for On-Demand Car Parts Delivery to Repair Shops",
+    image: "/images/projects/redline.png",
+    tag: ["All", "iOS", "Mobile"],
+    url: "/projects/redline",
+  },
+  {
+    id: 21,
+    title: "Nexus",
+    description: "A Personal Voice AI Assistant Built on a Free-Tier Stack",
+    image: "/images/projects/nexus.png",
+    tag: ["All", "AI"],
+    url: "/projects/nexus",
+  },
+  {
     id: 4,
     title: "CloakAI",
     description: "An AI Cybersecurity-Focused Compliancy ChatBot",
@@ -40,7 +112,7 @@ const projectsData = [
   {
     id: 5,
     title: "Nextjs Portfolio Website",
-    description: "A Learning Achievement - Portfolio Website",
+    description: "A Learning Achievement: Portfolio Website",
     image: "/images/projects/portfolio-website.png",
     tag: ["All", "Web"],
     url: "/projects/nextjs-portfolio",
@@ -103,6 +175,18 @@ const projectsData = [
   },
 ];
 
+// Product concepts: fully briefed and branded, but the apps are not built yet.
+const conceptsData = [
+  { id: 22, title: "Nixbill", description: "Concept: A Subscription and Membership Tracker With Cancel-By Dates", image: "/images/projects/nixbill.png", url: "/projects/nixbill" },
+  { id: 23, title: "Tailfile", description: "Concept: A Pet Vaccine Tracker With a Shareable Proof Page", image: "/images/projects/tailfile.png", url: "/projects/tailfile" },
+  { id: 24, title: "Pitfile", description: "Concept: Car Service Records and Reminders", image: "/images/projects/pitfile.png", url: "/projects/pitfile" },
+  { id: 25, title: "Missfix", description: "Concept: A Driving-Range Practice Companion", image: "/images/projects/missfix.png", url: "/projects/missfix" },
+  { id: 26, title: "Flagcall", description: "Concept: A Pocket Rules Referee for Settling Disputes", image: "/images/projects/flagcall.png", url: "/projects/flagcall" },
+  { id: 27, title: "Geocue", description: "Concept: Place-Based Phone Modes That Change With Your Location", image: "/images/projects/geocue.png", url: "/projects/geocue" },
+  { id: 28, title: "Cairnwalk", description: "Concept: An Offline Local-History Walking Guide", image: "/images/projects/cairnwalk.png", url: "/projects/cairnwalk" },
+  { id: 29, title: "Dockett", description: "Concept: An On-Device Receipt and Warranty Tracker", image: "/images/projects/dockett.png", url: "/projects/dockett" },
+];
+
 const ProjectSection = () => {
   useEffect(() => {
     AOS.init({
@@ -124,12 +208,40 @@ const ProjectSection = () => {
         </h2>
       </div>
 
-      <div className='grid grid-cols-2 gap-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
         {projectsData.map((project, index) => (
           <div
             key={project.id}
             data-aos="fade-up"
-            data-aos-delay={index * 100}
+            data-aos-delay={(index % 2) * 100}
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              pageUrl={project.url}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className='text-center mt-16 mb-8'>
+        <h3 className='mb-2'>
+          <span className='bg-gradient-to-r from-p-green to-s-blue text-transparent bg-clip-text inline-block'>
+            Product Concepts
+          </span>
+        </h3>
+        <p className='text-bt-grey max-w-xl mx-auto'>
+          Fully briefed and branded app ideas that are still in design. These apps have not been built yet.
+        </p>
+      </div>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+        {conceptsData.map((project, index) => (
+          <div
+            key={project.id}
+            data-aos="fade-up"
+            data-aos-delay={(index % 2) * 100}
           >
             <ProjectCard
               title={project.title}
@@ -160,7 +272,7 @@ export default ProjectSection;
 //   {
 //     id: 2,
 //     title: "Nextjs Portfolio Website",
-//     description: "A Learning Achievement - Portfolio Website",
+//     description: "A Learning Achievement: Portfolio Website",
 //     image: "/images/projects/project-2-2.png",
 //     tag: ["All", "Web"],
 //     url: "/projects/nextjs-portfolio",
@@ -261,7 +373,7 @@ export default ProjectSection;
 //   {
 //     id: 2,
 //     title: "Nextjs Portfolio Website",
-//     description: "A Learning Achievement - Portfolio Website",
+//     description: "A Learning Achievement: Portfolio Website",
 //     image: "/images/projects/project-2-2.png",
 //     tag: ["All", "Web"],
 //     url: "/projects/nextjs-portfolio",
@@ -364,7 +476,7 @@ export default ProjectSection;
 //   {
 //     id: 2,
 //     title: "Nextjs Portfolio Website",
-//     description: "A Learning Achievement - Portfolio Website",
+//     description: "A Learning Achievement: Portfolio Website",
 //     image: "/images/projects/project-2-2.png",
 //     tag: ["All", "Web"],
 //     url: "/projects/nextjs-portfolio",

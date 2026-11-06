@@ -19,13 +19,13 @@ const SkillsCard = ({ title, Icon }) => {
 
       {/* Icon with gradient color on hover */}
       {Icon && (
-        <Icon className="w-10 h-10 ml-3 text-gray-400 group-hover:text-p-green transition-colors duration-300 flex-shrink-0" />
+        <Icon aria-hidden="true" className="w-10 h-10 ml-3 text-gray-400 group-hover:text-p-green transition-colors duration-300 flex-shrink-0" />
       )}
 
       <div className="flex-grow">
-        <h3 className="text-xl font-semibold flex items-center justify-center group-hover:text-white transition-colors duration-300">
+        <h4 className="text-xl lg:text-xl font-semibold flex items-center justify-center group-hover:text-white transition-colors duration-300">
           {title}
-        </h3>
+        </h4>
       </div>
     </div>
   );

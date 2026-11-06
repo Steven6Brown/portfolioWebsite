@@ -17,21 +17,21 @@ export default async function BlogPage() {
       <div className="sticky top-0 z-10">
         <Navbar />
       </div>
-      <main className="container mx-auto px-4 pt-36 flex-grow">
+      <main id="main-content" tabIndex={-1} className="container mx-auto px-4 pt-36 flex-grow">
         <div className="text-center mb-14">
           <h3 className="mb-2">
             <span className="bg-gradient-to-r from-p-green to-s-blue text-transparent bg-clip-text inline-block">
               Writing
             </span>
           </h3>
-          <h2 className="text-white">Blog</h2>
+          <h1 className="text-white text-3xl lg:text-5xl">Blog</h1>
           <TypingText />
           <p className="text-bt-grey text-lg max-w-xl mx-auto mt-4">
             Cybersecurity breakdowns, tool reviews, and lessons from building AI-powered security tools.
           </p>
         </div>
         {posts.length === 0 ? (
-          <p className="text-center text-bt-grey mt-20">No posts yet — check back soon.</p>
+          <p className="text-center text-bt-grey mt-20">No posts yet. Check back soon.</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
             {posts.map((post) => (
@@ -60,9 +60,9 @@ export default async function BlogPage() {
                     ))}
                   </div>
                 )}
-                <h3 className="text-lg font-semibold text-white group-hover:text-p-green transition-colors duration-300 mb-2">
+                <h2 className="text-lg lg:text-lg font-semibold text-white group-hover:text-p-green transition-colors duration-300 mb-2">
                   {post.title}
-                </h3>
+                </h2>
                 <p className="text-bt-grey text-sm mb-6 line-clamp-2 flex-grow">{post.excerpt}</p>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center gap-4 text-xs text-bt-grey">

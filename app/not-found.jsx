@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-b from-black to-d-grey-bg">
+    <main id="main-content" tabIndex={-1} className="flex flex-col justify-center items-center h-screen bg-gradient-to-b from-black to-d-grey-bg">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-p-green to-s-blue mb-4">
           404 Error: Page Not Found
@@ -34,6 +34,6 @@ export default function NotFound() {
           </button>
         </Link> */}
       </div>
-    </div>
+    </main>
   );
 }

@@ -7,13 +7,13 @@ const Finio = () => {
         <>
             <p>
                 Finio is a privacy-first personal finance app that makes budgeting effortless by eliminating manual data entry. Instead of typing in every purchase, 
-                Finio reads your bank charge notifications and logs them automatically - no bank login required, no subscriptions, no data ever leaving your device.
+                Finio reads your bank charge notifications and logs them automatically, with no bank login required, no subscriptions, and no data ever leaving your device.
             </p>
 
             <br />
 
             <p>
-                When you receive a charge notification from your bank, you long-press it, copy the text, and open Finio - it detects the notification automatically, 
+                When you receive a charge notification from your bank, you long-press it, copy the text, and open Finio, and it detects the notification automatically, 
                 parses the merchant name, amount, and category instantly, and has it ready to add to your budget in one tap. You can also say "Hey Siri, add to Finio" 
                 and speak your charge completely hands-free.
             </p>
@@ -36,7 +36,7 @@ const Finio = () => {
                 <li>Home screen widget showing real-time budget status</li>
                 <li>Face ID authentication</li>
                 <li>Dark and light mode support</li>
-                <li>100% offline - all data stored locally on device</li>
+                <li>100% offline: all data stored locally on device</li>
             </ul>
         </>
     );
@@ -54,7 +54,7 @@ const Finio = () => {
             <br />
 
             <p>
-                Integrating Siri via AppIntents taught me how Apple's intent system works at a deeper level - defining parameters, handling donation of shortcuts, and 
+                Integrating Siri via AppIntents taught me how Apple's intent system works at a deeper level: defining parameters, handling donation of shortcuts, and 
                 designing voice interactions that feel natural rather than scripted. WidgetKit added another layer of complexity, requiring me to think carefully about 
                 timeline providers and keeping widget data fresh without draining battery.
             </p>
@@ -62,7 +62,7 @@ const Finio = () => {
             <br />
 
             <p>
-                The biggest design constraint - keeping everything 100% offline and on-device - forced me to make every architecture decision with privacy as the starting 
+                The biggest design constraint, keeping everything 100% offline and on-device, forced me to make every architecture decision with privacy as the starting 
                 point rather than an afterthought. Using Keychain for sensitive data and CoreData for persistence while keeping the app snappy reinforced how much thought 
                 goes into building something that feels simple but handles real user data responsibly.
             </p>

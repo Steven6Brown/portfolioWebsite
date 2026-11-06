@@ -12,10 +12,11 @@ import { Footer } from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-gradient-to-b from-h-black to-[#222222]">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-h-black to-[#222222]">
       <header className="w-full fixed z-10">
           <Navbar />
         </header>
+      <main id="main-content" tabIndex={-1} className="flex flex-col flex-1">
       <div>
         <HeroSection />
         <AboutSection />
@@ -29,9 +30,10 @@ export default function Home() {
       <div className="mt-16">
         <ConnectSection />
       </div>
+      </main>
       <div className="mt-16">
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }

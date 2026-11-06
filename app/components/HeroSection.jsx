@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { FaLinkedinIn } from "react-icons/fa";
@@ -8,6 +8,11 @@ import { FaRegFileAlt } from "react-icons/fa";
 
 const HeroSection = () => {
   const canvasRef = useRef(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    setPrefersReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,6 +35,8 @@ const HeroSection = () => {
       opacity: Math.random() * 1 + 0.5,
       color: Math.random() > 0.5 ? '#00ff88' : '#00d4ff',
     }));
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -63,7 +70,8 @@ const HeroSection = () => {
         if (p.y > canvas.height) p.y = 0;
       });
 
-      animationId = requestAnimationFrame(draw);
+      // Reduced motion: draw one still frame instead of animating.
+      if (!reduceMotion) animationId = requestAnimationFrame(draw);
     };
 
     draw();
@@ -90,48 +98,70 @@ const HeroSection = () => {
             <p className='text-bt-grey text-base sm:text-lg mb-6 lg:text-xl'>Thanks for stopping by!</p>
             <h1>I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-p-green to-s-blue'>Steven Brown</span></h1>
             <h2>
-              <TypeAnimation
-                sequence={[
-                  'A Cybersecurity Professional', 1500,
-                  'A Penn State Graduate', 1500,
-                  'An AI & Automation Enthusiast', 1500,
-                  'An NSA Certified Professional', 1500,
-                  'A Leader', 1500,
-                ]}
-                wrapper='span'
-                speed={1}
-                repeat={Infinity}
-              />
+              <span className='sr-only'>
+                Founder and CEO of Aquila Digital, cybersecurity professional, Penn State graduate, AI and automation enthusiast, NSA certified professional, and leader
+              </span>
+              <span aria-hidden='true'>
+              {prefersReducedMotion ? (
+                <span>Founder and CEO of Aquila Digital</span>
+              ) : (
+                <TypeAnimation
+                  sequence={[
+                    'Founder and CEO of Aquila Digital', 1500,
+                    'A Cybersecurity Professional', 1500,
+                    'A Penn State Graduate', 1500,
+                    'An AI & Automation Enthusiast', 1500,
+                    'An NSA Certified Professional', 1500,
+                    'A Leader', 1500,
+                  ]}
+                  wrapper='span'
+                  speed={1}
+                  repeat={Infinity}
+                />
+              )}
+              </span>
             </h2>
             <p className='mt-8 text-bt-grey text-center w-[75%]'>
               Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, NSA IST Certification, and hands-on experience in AI implementation,
               security infrastructure, and compliance. Passionate about leveraging AI and automation to solve real-world security challenges.
             </p>
+            <p className='mt-4 text-white text-center'>
+              Founder and CEO of{' '}
+              <Link
+                href='https://www.aquiladigital.net'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-block py-3 text-p-green underline underline-offset-4 hover:text-white'
+              >
+                Aquila Digital
+                <span className='sr-only'> (opens in a new tab)</span>
+              </Link>
+            </p>
             <p className="text-sm sm:text-base text-white mt-6 italic">
-              <strong>MY APPROACH: "FIGURE IT OUT" - "ADAPT AND OVERCOME"</strong>
+              <strong>MY APPROACH: "FIGURE IT OUT" AND "ADAPT AND OVERCOME"</strong>
             </p>
           </div>
 
           {/* ICON BUTTONS */}
           <div className='flex justify-center mt-6'>
             <div id="smallButton">
-              <Link href={'https://www.linkedin.com/in/steven-b-4a699b218/'}>
-                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black lg:mr-10 shadow-black shadow-lg'>
-                  <FaLinkedinIn className="h-6 w-6" />
+              <Link href={'https://www.linkedin.com/in/steven-b-4a699b218/'} className='inline-block rounded-full'>
+                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black lg:mr-10 shadow-black shadow-lg' aria-label='LinkedIn profile' tabIndex={-1}>
+                  <FaLinkedinIn className="h-6 w-6" aria-hidden="true" />
                 </button>
               </Link>
             </div>
             <div id="smallButton">
-              <Link href={'https://github.com/Steven6Brown'}>
-                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black lg:mr-10 shadow-black shadow-lg'>
-                  <FaGithub className="h-6 w-6" />
+              <Link href={'https://github.com/Steven6Brown'} className='inline-block rounded-full'>
+                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black lg:mr-10 shadow-black shadow-lg' aria-label='GitHub profile' tabIndex={-1}>
+                  <FaGithub className="h-6 w-6" aria-hidden="true" />
                 </button>
               </Link>
             </div>
             <div>
-              <Link href={'/files/sb-resume.pdf'}>
-                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
-                  <FaRegFileAlt className="h-6 w-6" />
+              <Link href={'/files/sb-resume.pdf'} className='inline-block rounded-full'>
+                <button className='p-4 w-full rounded-full sm:w-fit bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg' aria-label='Resume (PDF)' tabIndex={-1}>
+                  <FaRegFileAlt className="h-6 w-6" aria-hidden="true" />
                 </button>
               </Link>
             </div>
@@ -144,7 +174,7 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
               </span>
-              Open to Work — Cybersecurity &amp; AI Roles
+              Open to Work: Cybersecurity &amp; AI Roles
             </div>
           </Link>
           

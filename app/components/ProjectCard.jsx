@@ -7,6 +7,8 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
+    // Skip the 3D tilt for visitors who ask for less motion.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const card = cardRef.current;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -26,7 +28,7 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
   };
 
   return (
-    <Link href={pageUrl} aria-label={`${title} Page`}>
+    <Link href={pageUrl}>
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -39,7 +41,7 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
           <Image
             src={imgUrl}
             fill={true}
-            alt={title}
+            alt=""
             style={{ objectFit: "cover" }}
             className="group-hover:scale-105 transition-transform duration-500"
           />

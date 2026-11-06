@@ -4,17 +4,20 @@ import { useEffect, useRef, useState } from 'react';
 const stats = [
   { value: 3.83,  decimals: 2, suffix: '',   label: 'Major GPA',          sub: 'Penn State' },
   { value: 150,   decimals: 0, suffix: '+',  label: 'Documents Trained',  sub: 'in CloakAI' },
-  { value: 10,     decimals: 0, suffix: '+',  label: 'Projects',           sub: 'Completed' },
+  { value: 20,    decimals: 0, suffix: '+',  label: 'Projects',           sub: 'Built or in progress' },
   { value: 4,     decimals: 0, suffix: 'x',  label: "Dean's List",        sub: 'Honors' },
   { value: 2,     decimals: 0, suffix: '',   label: 'Minors Completed',   sub: 'SRA & IST' },
   { value: 1,     decimals: 0, suffix: '',   label: 'NSA IST Certified',  sub: 'May 2025' },
 ];
 
 const StatCard = ({ value, decimals, suffix, label, sub, animate }) => {
-  const [display, setDisplay] = useState('0');
+  // Show the real value by default so it is correct without JavaScript or with reduced motion.
+  const finalValue = value.toFixed(decimals) + suffix;
+  const [display, setDisplay] = useState(finalValue);
 
   useEffect(() => {
     if (!animate) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const duration = 2000;
     const start = performance.now();
     const update = (now) => {
@@ -34,7 +37,7 @@ const StatCard = ({ value, decimals, suffix, label, sub, animate }) => {
         {display}
       </div>
       <div className="text-white font-semibold text-sm">{label}</div>
-      <div className="text-gray-500 text-xs mt-1">{sub}</div>
+      <div className="text-gray-400 text-xs mt-1">{sub}</div>
     </div>
   );
 };

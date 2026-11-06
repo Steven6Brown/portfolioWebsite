@@ -12,17 +12,17 @@ const TAB_DATA = [
         id: 'education',
         content: (
             <div>
-                <h4 className='font-bold text-white border-b mb-1'>The Pennsylvania State University</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>The Pennsylvania State University</h3>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
-                        <li>B.S. Cybersecurity Analytics and Operations — May 2025</li>
+                        <li>B.S. Cybersecurity Analytics and Operations, May 2025</li>
                         <li>Major GPA: 3.83/4.0</li>
                         <li>Minors: Security Risk Analysis (SRA) and Information Sciences Technology (IST)</li>
                         <li>Vice Provost Award</li>
-                        <li>Dean's List — Fall 2022, Fall 2023, Spring 2024, Spring 2025</li>
+                        <li>Dean's List: Fall 2022, Fall 2023, Spring 2024, Spring 2025</li>
                     </ul>
                 </div>
-                <h4 className='font-bold text-white border-b mb-1'>Relevant Courses</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Relevant Courses</h3>
                 <div className='pl-4'>
                     <ul className='list-disc'>
                         <li>Networking & Telecommunications</li>
@@ -40,21 +40,27 @@ const TAB_DATA = [
         id: 'experience',
         content: (
             <div>
-                <h4 className='font-bold text-white border-b mb-1'>Technical Experience</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Business</h3>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
-                        <li>Digital Cloak LLC — Technical Intern (June 2024 – August 2024)</li>
-                        <li>Penn State Learning Assistant — Cyber 262 & IST 456 (Jan 2023 – Dec 2024)</li>
-                        <li>Penn State Homecoming — Technology Captain (Spring 2024 – Fall 2024)</li>
+                        <li>Aquila Digital LLC, Founder and CEO (2026 to Present)</li>
+                    </ul>
+                </div>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Technical Experience</h3>
+                <div className='pl-4 mb-4'>
+                    <ul className='list-disc'>
+                        <li>Digital Cloak LLC, Technical Intern (June 2024 to August 2024)</li>
+                        <li>Penn State Learning Assistant, Cyber 262 & IST 456 (Jan 2023 to Dec 2024)</li>
+                        <li>Penn State Homecoming, Technology Captain (Spring 2024 to Fall 2024)</li>
                         <li>Competitive Cyber Security Organization (CCSO)</li>
                         <li>HackTheBox Academy</li>
                     </ul>
                 </div>
-                <h4 className='font-bold text-white border-b mb-1'>Work Experience</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Work Experience</h3>
                 <div className='pl-4'>
                     <ul className='list-disc'>
-                        <li>Men's Wearhouse — Store Lead</li>
-                        <li>AG Parts Worldwide Inc. — Computer Technician</li>
+                        <li>Men's Wearhouse, Store Lead</li>
+                        <li>AG Parts Worldwide Inc., Computer Technician</li>
                         <li>The LandTek Group</li>
                     </ul>
                 </div>
@@ -66,23 +72,23 @@ const TAB_DATA = [
         id: 'certifications',
         content: (
             <div>
-                <h4 className='font-bold text-white border-b mb-1'>Federal</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Federal</h3>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
-                        <li>NSA IST Certification — May 2025</li>
-                        <li>DOD Mandatory Controlled Unclassified Information (CUI) Training — June 2024</li>
+                        <li>NSA IST Certification, May 2025</li>
+                        <li>DOD Mandatory Controlled Unclassified Information (CUI) Training, June 2024</li>
                     </ul>
                 </div>
 
-                <h4 className='font-bold text-white border-b mb-1'>Fortinet Training Institute</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Fortinet Training Institute</h3>
                 <div className='pl-4 mb-4'>
                     <ul className='list-disc'>
-                        <li>Introduction to the Threat Landscape 3.0 — December 2025</li>
-                        <li>Getting Started in Cybersecurity 3.0 — December 2025</li>
+                        <li>Introduction to the Threat Landscape 3.0, December 2025</li>
+                        <li>Getting Started in Cybersecurity 3.0, December 2025</li>
                     </ul>
                 </div>
 
-                <h4 className='font-bold text-white border-b mb-1'>LinkedIn Certifications</h4>
+                <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>LinkedIn Certifications</h3>
                 <div className='pl-4'>
                     <ul className='list-disc'>
                         <li>Cyber Awareness Challenge Certificate</li>
@@ -101,7 +107,7 @@ const TAB_DATA = [
             <div>
                 <div className="flex flex-wrap gap-4">
                     <div className="w-1/3">
-                        <h4 className='font-bold text-white border-b mb-1'>Outdoors</h4>
+                        <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Outdoors</h3>
                         <div className='pl-4 pb-4'>
                             <ul className='list-disc'>
                                 <li>Backcountry camping under the stars.</li>
@@ -113,7 +119,7 @@ const TAB_DATA = [
                         </div>
                     </div>
                     <div className="w-1/4">
-                        <h4 className='font-bold text-white border-b mb-1'>Sports</h4>
+                        <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Sports</h3>
                         <div className='pl-4 pb-4'>
                             <ul className='list-disc'>
                                 <li>Competitive baseball leagues.</li>
@@ -126,7 +132,7 @@ const TAB_DATA = [
                         </div>
                     </div>
                     <div className="w-1/3">
-                        <h4 className='font-bold text-white border-b mb-1'>Music</h4>
+                        <h3 className='font-bold text-white border-b mb-1 text-xl lg:text-xl'>Music</h3>
                         <div className='pl-4 pb-4'>
                             <ul className='list-disc'>
                                 <li>Songwriting and performing on acoustic guitar.</li>
@@ -162,7 +168,7 @@ export const AboutSection = () => {
     };
 
     return (
-        <section id='about' className='text-white container'>
+        <section id='about' className='text-white container overflow-x-clip'>
             <div className='text-center' data-aos="fade-up">
                 <h3 className='text-transparent bg-clip-text bg-gradient-to-r from-p-green to-s-blue mb-2 inline-block'>
                     About Me
@@ -185,6 +191,21 @@ export const AboutSection = () => {
                         security infrastructure, and compliance frameworks, including NIST SP 800, CMMC, and OSINT.
                     </p>
                     <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
+                        I am also the Founder and CEO of{' '}
+                        <a
+                            href='https://www.aquiladigital.net'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-p-green underline underline-offset-4 hover:text-white'
+                        >
+                            Aquila Digital LLC
+                            <span className='sr-only'> (opens in a new tab)</span>
+                        </a>
+                        , where I design and build mobile-first websites and web and mobile apps for local businesses, and I am expanding into hands-on IT and
+                        cybersecurity support. Aquila also offers free, plain-language tech seminars for older adults on spotting scams and using devices safely.
+                        The tools I have built there include TalonForge, Kestrel, QuoteWork and Finio. I founded Aquila in 2026 after building toward it since 2023.
+                    </p>
+                    <p className='text-base md:text-md' style={{ marginBottom: '1em' }}>
                         My passion for technology began early and has continued to grow through hands-on experience in cybersecurity and applied AI. 
                         During my internship, I designed and trained CloakAI, a locally hosted AI cybersecurity compliance assistant, 
                         built from over 150 regulatory and security documents to support analyst decision-making while maintaining strict data privacy. 
@@ -204,7 +225,7 @@ export const AboutSection = () => {
                             <button
                                 key={t.id}
                                 onClick={() => handleTabChange(t.id)}
-                                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                                className={`px-4 py-2 min-h-[44px] rounded-lg text-sm font-semibold transition-all duration-200 ${
                                     tab === t.id
                                         ? 'bg-gradient-to-r from-p-green to-s-blue text-black'
                                         : 'bg-[#1a1a1a] text-gray-400 hover:text-white border border-gray-700'

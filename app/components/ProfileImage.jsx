@@ -48,7 +48,9 @@ export const ProfileImage = () => {
                 step++;
             }
         };
-        const blobInterval = setInterval(morphBlob, 1800);
+        // Respect visitors who ask for less motion: leave the blob and rings still.
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const blobInterval = reduceMotion ? null : setInterval(morphBlob, 1800);
 
         let angle1 = 0;
         let angle2 = 0;
@@ -58,11 +60,11 @@ export const ProfileImage = () => {
             if (ringRef.current)  ringRef.current.style.transform = `rotate(${angle1}deg)`;
             if (ring2Ref.current) ring2Ref.current.style.transform = `rotate(${angle2}deg)`;
         };
-        const ringInterval = setInterval(rotateRings, 16);
+        const ringInterval = reduceMotion ? null : setInterval(rotateRings, 16);
 
         return () => {
-            clearInterval(blobInterval);
-            clearInterval(ringInterval);
+            if (blobInterval) clearInterval(blobInterval);
+            if (ringInterval) clearInterval(ringInterval);
         };
     }, []);
 

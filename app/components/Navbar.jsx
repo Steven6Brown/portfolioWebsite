@@ -70,16 +70,20 @@ export const Navbar = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-p-green hover:border-p-green"
+              aria-label="Open menu"
+              aria-expanded="false"
+              className="flex items-center px-3 py-3 border rounded border-slate-200 text-slate-200 hover:text-p-green hover:border-p-green"
             >
-              <HiBars3 className="h-5 w-5" />
+              <HiBars3 className="h-5 w-5" aria-hidden="true" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-p-green hover:border-p-green"
+              aria-label="Close menu"
+              aria-expanded="true"
+              className="flex items-center px-3 py-3 border rounded border-slate-200 text-slate-200 hover:text-p-green hover:border-p-green"
             >
-              <HiOutlineXMark className="h-5 w-5" />
+              <HiOutlineXMark className="h-5 w-5" aria-hidden="true" />
             </button>
           )}
         </div>

@@ -25,6 +25,7 @@ const ConnectSection = () => {
             email: e.target.email.value,
             subject: e.target.subject.value,
             message: e.target.message.value,
+            website: e.target.website.value,
         };
 
         try {
@@ -52,59 +53,59 @@ const ConnectSection = () => {
                         Contact
                     </span>
                 </h3>
-                <h2 className='text-white mb-3'>Let's Connect</h2>
+                <h2 className='text-white mb-3'>Let&apos;s Connect</h2>
                 <p className='text-bt-grey mb-4 max-w-md mx-auto'>
-                    I'm actively looking for new opportunities in cybersecurity and AI. 
-                    Whether you have a question, an opportunity, or just want to say hello - 
-                    my inbox is always open!
+                    I&apos;m actively looking for new opportunities in cybersecurity and AI. 
+                    Whether you have a question, an opportunity, or just want to say hello. My inbox is always open!
+                </p>
+
+                <p className='text-bt-grey mb-6'>
+                    Prefer email?{' '}
+                    <a
+                        href='mailto:steven.r.brown.tech@gmail.com'
+                        className='inline-block py-3 text-p-green underline underline-offset-4 hover:text-white'
+                    >
+                        steven.r.brown.tech@gmail.com
+                    </a>
                 </p>
 
                 {/* Social Icons */}
                 <div className='flex flex-row py-2 space-x-8 justify-center mb-8'>
                     <div className='flex flex-col items-center gap-2'>
-                        <Link href='https://www.linkedin.com/in/steven-b-4a699b218/'>
-                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
-                                <FaLinkedinIn className="h-6 w-6" />
+                        <Link href='https://www.linkedin.com/in/steven-b-4a699b218/' className='inline-block rounded-full'>
+                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg' aria-label='LinkedIn profile' tabIndex={-1}>
+                                <FaLinkedinIn className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </Link>
                         {/* <span className='text-gray-400 text-sm'>LinkedIn</span> */}
                     </div>
 
                     <div className='flex flex-col items-center gap-2'>
-                        <Link href='https://github.com/Steven6Brown'>
-                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
-                                <FaGithub className="h-6 w-6" />
+                        <Link href='https://github.com/Steven6Brown' className='inline-block rounded-full'>
+                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg' aria-label='GitHub profile' tabIndex={-1}>
+                                <FaGithub className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </Link>
                         {/* <span className='text-gray-400 text-sm'>GitHub</span> */}
                     </div>
 
                     <div className='flex flex-col items-center gap-2'>
-                        <Link href='/files/sb-resume.pdf'>
-                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
-                                <FaRegFileAlt className="h-6 w-6" />
+                        <Link href='/files/sb-resume.pdf' className='inline-block rounded-full'>
+                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg' aria-label='Resume (PDF)' tabIndex={-1}>
+                                <FaRegFileAlt className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </Link>
                         {/* <span className='text-gray-400 text-sm'>Resume</span> */}
                     </div>
-
-                    {/* <div className='flex flex-col items-center gap-2'>
-                        <Link href='mailto:brownsteven21329@gmail.com'>
-                            <button className='p-4 rounded-full bg-transparent bg-gradient-to-br from-p-green to-s-blue hover:bg-slate-800 text-black shadow-black shadow-lg'>
-                                <FaEnvelope className="h-6 w-6" />
-                            </button>
-                        </Link>
-                        <span className='text-gray-400 text-sm'>Email</span>
-                    </div> */}
                 </div>
             </div>
 
             {/* Contact Form */}
             <div className='max-w-xl mx-auto' data-aos="fade-up" data-aos-delay="100">
                 {emailSubmitted ? (
-                    <div className='text-center p-8 bg-[#1a1a1a] rounded-xl border border-gray-800'>
+                    <div role='status' aria-live='polite' className='text-center p-8 bg-[#1a1a1a] rounded-xl border border-gray-800'>
                         <h3 className='text-p-green mb-2'>Message Sent!</h3>
-                        <p className='text-gray-400'>Thanks for reaching out - I'll get back to you as soon as possible!</p>
+                        <p className='text-gray-400'>Thanks for reaching out. I&apos;ll get back to you as soon as possible!</p>
                     </div>
                 ) : (
                     <form className='flex flex-col gap-4 bg-[#1a1a1a] p-8 rounded-xl border border-gray-800' onSubmit={handleSubmit}>
@@ -114,6 +115,7 @@ const ConnectSection = () => {
                                 type='text'
                                 id='name'
                                 name='name'
+                                autoComplete='name'
                                 required
                                 className='bg-[#121212] border border-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-p-green'
                                 placeholder='John Doe'
@@ -126,6 +128,7 @@ const ConnectSection = () => {
                                 type='email'
                                 id='email'
                                 name='email'
+                                autoComplete='email'
                                 required
                                 className='bg-[#121212] border border-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-p-green'
                                 placeholder='john@example.com'
@@ -156,7 +159,13 @@ const ConnectSection = () => {
                             />
                         </div>
 
-                        {error && <p className='text-red-500 text-sm'>{error}</p>}
+                        {/* Honeypot: hidden from people and assistive tech, bots tend to fill it in */}
+                        <div className='absolute -left-[9999px] h-0 w-0 overflow-hidden' aria-hidden='true'>
+                            <label htmlFor='website'>Leave this field empty</label>
+                            <input type='text' id='website' name='website' tabIndex={-1} autoComplete='off' />
+                        </div>
+
+                        {error && <p role='alert' className='text-red-400 text-sm'>{error}</p>}
 
                         <button
                             type='submit'

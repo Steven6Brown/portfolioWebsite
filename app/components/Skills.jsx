@@ -132,9 +132,9 @@ const Skills = () => {
 
             <div className="flex items-center gap-3 mb-5">
                 <div className="w-1 h-6 rounded-full flex-shrink-0 bg-gradient-to-b from-p-green to-s-blue" />
-                    <h4 className="text-sm font-semibold uppercase tracking-widest text-white">
+                    <h3 className="text-sm lg:text-sm font-semibold uppercase tracking-widest text-white">
                         {group.label}
-                    </h4>
+                    </h3>
                 <div className="flex-1 h-px opacity-20 bg-gradient-to-r from-p-green to-s-blue" />
             </div>
 

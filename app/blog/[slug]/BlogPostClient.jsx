@@ -19,7 +19,7 @@ export default function BlogPostClient({ post }) {
         <Navbar />
       </div>
 
-      <main className="pt-32 flex-grow">
+      <main id="main-content" tabIndex={-1} className="pt-32 flex-grow">
         <div className="container mx-auto">
 
           {/* Tags */}

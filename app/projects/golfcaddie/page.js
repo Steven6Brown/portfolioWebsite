@@ -62,7 +62,9 @@ const GolfCaddie = () => {
                 description2={description2}
                 subtitle3="What I Learned"
                 description3={description3}
-                codebutton=''
+                codebutton='https://github.com/Steven6Brown/GolfCaddie'
+                codebuttonlabel='View Code on GitHub'
+                extraLinks={[{ href: 'https://www.instagram.com/golf.caddie', label: 'Follow GolfCaddie on Instagram' }]}
             />
         </div>
     );
