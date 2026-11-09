@@ -97,45 +97,31 @@ const HeroSection = () => {
           <div className='flex flex-col justify-center items-center'>
             <p className='text-bt-grey text-base sm:text-lg mb-6 lg:text-xl'>Thanks for stopping by!</p>
             <h1>I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-p-green to-s-blue'>Steven Brown</span></h1>
-            <h2>
-              <span className='sr-only'>
-                Founder and CEO of Aquila Digital, cybersecurity professional, Penn State graduate, AI and automation enthusiast, NSA certified professional, and leader
-              </span>
+            <h2 className='mt-6 min-h-[5rem] sm:min-h-[3rem] max-w-5xl px-4 text-center text-2xl sm:text-3xl lg:text-4xl leading-tight font-bold text-white'>
+              <span className='sr-only'>Founder and CEO of Aquila Digital, cybersecurity professional, Penn State graduate, AI and automation enthusiast, NSA certified professional, and leader</span>
               <span aria-hidden='true'>
-              {prefersReducedMotion ? (
-                <span>Founder and CEO of Aquila Digital</span>
-              ) : (
-                <TypeAnimation
-                  sequence={[
-                    'Founder and CEO of Aquila Digital', 1500,
-                    'A Cybersecurity Professional', 1500,
-                    'A Penn State Graduate', 1500,
-                    'An AI & Automation Enthusiast', 1500,
-                    'An NSA Certified Professional', 1500,
-                    'A Leader', 1500,
-                  ]}
-                  wrapper='span'
-                  speed={1}
-                  repeat={Infinity}
-                />
-              )}
+                {prefersReducedMotion ? (
+                  <span>Founder and CEO of Aquila Digital</span>
+                ) : (
+                  <TypeAnimation
+                    sequence={[
+                      'Founder and CEO of Aquila Digital', 2500,
+                      'Cybersecurity Professional', 1800,
+                      'Penn State Graduate', 1800,
+                      'AI & Automation Enthusiast', 1800,
+                      'NSA Certified Professional', 1800,
+                      'Leader and Builder', 1800,
+                    ]}
+                    wrapper='span'
+                    speed={1}
+                    repeat={Infinity}
+                  />
+                )}
               </span>
             </h2>
             <p className='mt-8 text-bt-grey text-center w-[75%]'>
               Penn State graduate with a B.S. in Cybersecurity Analytics and Operations, NSA IST Certification, and hands-on experience in AI implementation,
               security infrastructure, and compliance. Passionate about leveraging AI and automation to solve real-world security challenges.
-            </p>
-            <p className='mt-4 text-white text-center'>
-              Founder and CEO of{' '}
-              <Link
-                href='https://www.aquiladigital.net'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-block py-3 text-p-green underline underline-offset-4 hover:text-white'
-              >
-                Aquila Digital
-                <span className='sr-only'> (opens in a new tab)</span>
-              </Link>
             </p>
             <p className="text-sm sm:text-base text-white mt-6 italic">
               <strong>MY APPROACH: "FIGURE IT OUT" AND "ADAPT AND OVERCOME"</strong>

@@ -198,7 +198,7 @@ export const AboutSection = () => {
                             rel='noopener noreferrer'
                             className='text-p-green underline underline-offset-4 hover:text-white'
                         >
-                            Aquila Digital LLC
+                            Aquila Digital
                             <span className='sr-only'> (opens in a new tab)</span>
                         </a>
                         , where I design and build mobile-first websites and web and mobile apps for local businesses, and I am expanding into hands-on IT and

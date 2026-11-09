@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, pageUrl, imageFit = "cover", imageBackground }) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -37,12 +37,12 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl }) => {
         style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
       >
         {/* Image container */}
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9', backgroundColor: imageBackground }}>
           <Image
             src={imgUrl}
             fill={true}
             alt=""
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: imageFit }}
             className="group-hover:scale-105 transition-transform duration-500"
           />
           {/* Shine overlay on tilt */}

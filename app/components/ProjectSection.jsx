@@ -81,7 +81,9 @@ const projectsData = [
     id: 19,
     title: "TrailMix",
     description: "A Native iOS Dating App for Outdoor Enthusiasts",
-    image: "/images/projects/trailmix.png",
+    image: "/images/projects/trailmix-logo.png",
+    imageFit: "contain",
+    imageBackground: "#EFE6D2",
     tag: ["All", "iOS", "Mobile"],
     url: "/projects/trailmix",
   },
@@ -219,6 +221,8 @@ const ProjectSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
+              imageFit={project.imageFit}
+              imageBackground={project.imageBackground}
               pageUrl={project.url}
             />
           </div>
@@ -247,6 +251,8 @@ const ProjectSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
+              imageFit={project.imageFit}
+              imageBackground={project.imageBackground}
               pageUrl={project.url}
             />
           </div>
