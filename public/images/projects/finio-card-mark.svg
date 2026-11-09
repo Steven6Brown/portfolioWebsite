@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="250 100 365 400" role="img" aria-label="Finio mark">
+  <defs>
+    <linearGradient id="finio-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#finio-orange)">
+    <rect x="337" y="300" width="56" height="108" rx="18"/>
+    <rect x="405" y="252" width="56" height="156" rx="18"/>
+    <rect x="472" y="197" width="56" height="211" rx="18"/>
+  </g>
+</svg>

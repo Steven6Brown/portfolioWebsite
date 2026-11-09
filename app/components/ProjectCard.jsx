@@ -37,7 +37,7 @@ const ProjectCard = ({ imgUrl, title, description, pageUrl, imageFit = "cover", 
         style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
       >
         {/* Image container */}
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9', backgroundColor: imageBackground }}>
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9', background: imageBackground }}>
           <Image
             src={imgUrl}
             fill={true}
